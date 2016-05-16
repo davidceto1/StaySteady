@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StaySteady.Mobile.ReportPage"
+	Title = "Daily Report"
+		>
+	<ContentPage.Content>
+
+	<Grid
+		RowSpacing="1"
+    	ColumnSpacing="0"
+				>
+			
+    <Grid.RowDefinitions>
+      <RowDefinition Height="20*" />
+      <RowDefinition Height="5*" />
+	  <RowDefinition Height="5*" />		
+      <RowDefinition Height="5*" />
+      <RowDefinition Height="5*" />
+	  <RowDefinition Height="5*" />
+	  <RowDefinition Height="5*" />		
+      <RowDefinition Height="5*" />
+      <RowDefinition Height="5*" />
+	  <RowDefinition Height="10*" />
+	  <RowDefinition Height="5*" />
+	  <RowDefinition Height="5*" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+	
+			
+		<Label Text="Daily Report"
+           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+           FontSize="30"
+           TextColor="#54211d"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Risk of Fall"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="1" Grid.Column="0"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Medium"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="1" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="LastUpdate"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="2" Grid.Column="0"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="18/04/2016"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="2" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+
+		<Label Text="Patient name"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="3" Grid.Column="0"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Mary Poppins"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="3" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="Age"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="4" Grid.Column="0"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="78"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="4" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Stability Rate"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="5" Grid.Column="0"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="55%"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="5" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="Temperature"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="6" Grid.Column="0"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="36C"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="6" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Heart Rate"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="7" Grid.Column="0"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="60-120bpm"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="7" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="Obervations"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="8" Grid.Column="0"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Previous falls"
+		   BackgroundColor = "#f15a22"
+		  
+           Grid.Row="8" Grid.Column="1"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+         <Label Text=" "
+		   Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
+           FontSize="20"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+    	<Button Text="Book Appointment "
+            Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+			BackgroundColor = "#c1a173"
+			FontSize="20"
+			BorderWidth = "1"
+           	TextColor="White"
+			WidthRequest = "200"
+				/>
+
+		  
+			
+	</Grid>
+
+
+		
+	</ContentPage.Content>
+</ContentPage>
+
