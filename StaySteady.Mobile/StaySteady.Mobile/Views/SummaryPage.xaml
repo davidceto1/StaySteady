@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StaySteady.Mobile.SummaryPage">
+	<ContentPage.Content>
+	<StackLayout Orientation="Vertical">
+                        
+                    
+		
+	<Grid
+		RowSpacing="1"
+    	ColumnSpacing="0"
+				>
+			
+    <Grid.RowDefinitions>
+      <RowDefinition Height="140" />
+      <RowDefinition Height="*" />
+	  <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+	  <RowDefinition Height="*" />
+	  <RowDefinition Height="*" />
+	  <RowDefinition Height="*" />
+	  <RowDefinition Height="*" />
+     
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+	  <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+	  <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+	
+			
+		<Label Text="Summary"
+           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
+           FontSize="30"
+           TextColor="#54211d"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Patient"
+		   BackgroundColor = "#009ad6"
+           Grid.Row="1" Grid.Column="0"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Age"
+		   BackgroundColor = "#2468a2"
+           Grid.Row="1" Grid.Column="1"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="Risk"
+		   BackgroundColor = "#009ad6"
+           Grid.Row="1" Grid.Column="2"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Stability"
+		   BackgroundColor = "#2468a2"
+           Grid.Row="1" Grid.Column="3"
+		   FontAttributes = "Bold"
+           FontSize="19"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+
+		<Label Text="More"
+		   BackgroundColor = "#009ad6"
+           Grid.Row="1" Grid.Column="4"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Soul"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="2" Grid.Column="0"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="80"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="2" Grid.Column="1"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="High"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="2" Grid.Column="2"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="12%"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="2" Grid.Column="3"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="(0)Check"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="2" Grid.Column="4"
+           FontSize="15"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="Amy"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="3" Grid.Column="0"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="85"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="3" Grid.Column="1"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="High"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="3" Grid.Column="2"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="15%"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="3" Grid.Column="3"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="(0)Check"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="3" Grid.Column="4"
+           FontSize="15"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+				
+		<Label Text="Mariah"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="4" Grid.Column="0"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="71"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="4" Grid.Column="1"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Low"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="4" Grid.Column="2"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="80%"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="4" Grid.Column="3"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="(0)Check"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="4" Grid.Column="4"
+           FontSize="15"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+				<Label Text="Volerie"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="5" Grid.Column="0"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+			
+		<Label Text="65"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="5" Grid.Column="1"
+           FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="Medium"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="5" Grid.Column="2"
+           FontSize="20"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="45%"
+		   BackgroundColor = "#f15a22"
+           Grid.Row="5" Grid.Column="3"
+		   FontAttributes = "Bold"
+           FontSize="20"
+		   TextColor="#f2eada"		
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text="(0)Check"
+		   BackgroundColor = "#8a2e3b"
+           Grid.Row="5" Grid.Column="4"
+           FontSize="15"
+		   TextColor="#f2eada"
+           XAlign="Center"
+           YAlign="Center"/>
+
+		<Label Text=" "
+		   
+           Grid.Row="6" Grid.Column="4"
+           FontSize="20"
+           XAlign="Center"
+           YAlign="Center"/>
+
+			<Button Text = "Back"
+			Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"
+			BackgroundColor = "#c1a173"
+			FontSize="20"
+			BorderWidth = "1"
+           	TextColor="White"
+			WidthRequest = "200" />
+			
+	</Grid>
+
+
+
+	</StackLayout>	
+	</ContentPage.Content>
+</ContentPage>
