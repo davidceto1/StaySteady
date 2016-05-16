@@ -40,7 +40,7 @@
            YAlign="Center"/>
 
 		<Label Text="Patient"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#009ad6"
            Grid.Row="1" Grid.Column="0"
 		   FontAttributes = "Bold"
            FontSize="20"
@@ -49,15 +49,16 @@
            YAlign="Center"/>
 
 		<Label Text="Age"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#2468a2"
            Grid.Row="1" Grid.Column="1"
+		   FontAttributes = "Bold"
            FontSize="20"
 		   TextColor="#f2eada"
            XAlign="Center"
            YAlign="Center"/>
 			
 		<Label Text="Risk"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#009ad6"
            Grid.Row="1" Grid.Column="2"
            FontAttributes = "Bold"
            FontSize="20"
@@ -65,17 +66,18 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="Stability Rate"
-		   BackgroundColor = "#f15a22"
+		<Label Text="Stability"
+		   BackgroundColor = "#2468a2"
            Grid.Row="1" Grid.Column="3"
-           FontSize="20"
+		   FontAttributes = "Bold"
+           FontSize="19"
 		   TextColor="#f2eada"
            XAlign="Center"
            YAlign="Center"/>
 			
 
 		<Label Text="More"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#009ad6"
            Grid.Row="1" Grid.Column="4"
 		   FontAttributes = "Bold"
            FontSize="20"
