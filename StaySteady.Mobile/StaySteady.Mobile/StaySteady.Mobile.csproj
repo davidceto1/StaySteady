@@ -40,6 +40,12 @@
     <Compile Include="Views\DailyActivity.xaml.cs">
       <DependentUpon>DailyActivity.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReportPage2.xaml.cs">
+      <DependentUpon>ReportPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SummaryPage2.xaml.cs">
+      <DependentUpon>SummaryPage2.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -61,6 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DailyActivity.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ReportPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SummaryPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
