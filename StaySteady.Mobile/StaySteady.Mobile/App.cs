@@ -12,21 +12,7 @@ namespace StaySteady.Mobile
     {
         public App()
         {
-            MainPage = new DailyActivity();
-            // The root page of your application
-            //MainPage = new ContentPage
-            //{
-            //    Content = new StackLayout
-            //    {
-            //        VerticalOptions = LayoutOptions.Center,
-            //        Children = {
-            //            new Label {
-            //                XAlign = TextAlignment.Center,
-            //                Text = "Welcome to Xamarin Forms!"
-            //            }
-            //        }
-            //    }
-            //};
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
