@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using StaySteady.Mobile.iOS.Utility;
+using StaySteady.Mobile.Utility;
 using UIKit;
+using Xamarin.Forms;
 
 namespace StaySteady.Mobile.iOS
 {
@@ -15,6 +18,7 @@ namespace StaySteady.Mobile.iOS
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
             UIApplication.Main(args, null, "AppDelegate");
+            DependencyService.Register<IDialer,PhoneDialer>();
         }
     }
 }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using StaySteady.Mobile.Utility;
 using Xamarin.Forms;
 
 namespace StaySteady.Mobile
@@ -12,6 +12,7 @@ namespace StaySteady.Mobile
     {
         public App()
         {
+            
             MainPage = new NavigationPage(new MainPage());
         }
 

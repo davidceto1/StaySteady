@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using StaySteady.Mobile.Droid.Utility;
+using StaySteady.Mobile.Utility;
+using Xamarin.Forms;
 
 namespace StaySteady.Mobile.Droid
 {
@@ -18,6 +21,7 @@ namespace StaySteady.Mobile.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+            DependencyService.Register<IDialer,PhoneDialer>();
         }
     }
 }

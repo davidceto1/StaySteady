@@ -4,9 +4,14 @@
              x:Class="StaySteady.Mobile.Views.MainPage">
   <ContentPage.Content>
     <StackLayout Orientation="Vertical"   >
-      <Button Text="Elder" Clicked="GoElder"></Button>
-      <Button Text="Doctor" Clicked="GoDoctor"></Button>
-      <Button Text="Relative" Clicked="GoRelative"></Button>
+      <Label Text="What do you want to do?"
+           Font="Large"
+           HorizontalOptions="Center"
+            />
+      <Button Text="View Daily Activity" HorizontalOptions="Center" Clicked="GoElder" ></Button>
+      <Button Text="View Summary" HorizontalOptions="Center" Clicked="GoDoctor"></Button>
+      <Button Text="View Daily Report" HorizontalOptions="Center"  Clicked="GoRelative"></Button>
+      <Button Text="Fall detection" HorizontalOptions="Center"  Clicked="Button_OnClicked"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
