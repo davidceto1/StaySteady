@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 using StaySteady.Mobile.Models;
 using StaySteady.Mobile.Utility;
 using Xamarin.Forms;
+using System.Threading;
 
 namespace StaySteady.Mobile.Views
 {
     public partial class FallDetectedPage : ContentPage
     {
         private IDialer _dialer;
-
-        
+        private FallDetectedModel _model;
 
         public FallDetectedPage()
         {
             InitializeComponent();
             _dialer = DependencyService.Get<IDialer>();
-            FallDetectedModel Model = new FallDetectedModel();
-            Model.CountDownInteger = 30;
-            this.BindingContext = Model;
+            _model = new FallDetectedModel();
+            _model.CountDownInteger = 30;
+            this.BindingContext = _model;
+            Device.StartTimer(new TimeSpan(0,0,0,1), () =>
+            {
+                _model.CountDownInteger--;
+                return true;
+            });
         }
 
         private void Button_OnClicked(object sender, EventArgs e)
@@ -34,6 +39,12 @@ namespace StaySteady.Mobile.Views
             _dialer.Dial("000");
         }
 
-        
+
+        private void Extra_OnClicked(object sender, EventArgs e)
+        {
+            _model.CountDownInteger--;
+        }
+
+
     }
 }
