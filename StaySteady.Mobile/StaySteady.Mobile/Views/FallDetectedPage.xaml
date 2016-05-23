@@ -4,10 +4,10 @@
              x:Class="StaySteady.Mobile.Views.FallDetectedPage">
   <StackLayout Orientation="Vertical" BackgroundColor="#ecf0f1"  >
     <Label TextColor="#7f8c8d" FontSize="30" HorizontalOptions="CenterAndExpand">It looks like you had a fall!</Label>
-    <Label TextColor="#7f8c8d" FontSize="60" HorizontalOptions="Center" Text="{Binding CountDownString}" ></Label>
+    <Label TextColor="#7f8c8d" FontSize="100" HorizontalOptions="Center" Text="{Binding Model.CountDownString}" ></Label>
     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-      <Button Text="I am OK!" BackgroundColor="#2ecc71" TextColor="White" Clicked="Button_OnClicked"></Button>
-      <Button Text="Call Emergency" BackgroundColor="#e74c3c" TextColor="White"  Clicked="Emergency_OnClicked"></Button>
+      <Button Text="I am OK!" BackgroundColor="#2ecc71" TextColor="White" Command="{Binding GoBackCommand}"></Button>
+      <Button Text="Call Emergency" BackgroundColor="#e74c3c" TextColor="White"  Command="{Binding CallEmergencyNumberCommand}"></Button>
     </StackLayout>
   </StackLayout>
 </ContentPage>
