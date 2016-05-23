@@ -42,6 +42,9 @@
     <Compile Include="Utility\IDialer.cs" />
     <Compile Include="Utility\NavigationService.cs" />
     <Compile Include="ViewModels\FallDetectedViewModel.cs" />
+    <Compile Include="Views\AddReminderPage.xaml.cs">
+      <DependentUpon>AddReminderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DailyActivity.xaml.cs">
       <DependentUpon>DailyActivity.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FallDetectedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AddReminderPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

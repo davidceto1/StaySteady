@@ -36,5 +36,10 @@ namespace StaySteady.Mobile.Views
         {
             Navigation.PushAsync(new FallDetectedPage());
         }
+
+        private void AddReminderButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddReminderPage());
+        }
     }
 }
