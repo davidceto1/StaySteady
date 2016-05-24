@@ -9,5 +9,5 @@
       <Button Text="I am OK!" BackgroundColor="#2ecc71" TextColor="White" Command="{Binding GoBackCommand}"></Button>
       <Button Text="Call Emergency" BackgroundColor="#e74c3c" TextColor="White"  Command="{Binding CallEmergencyNumberCommand}"></Button>
     </StackLayout>
-  </StackLayout>:
+  </StackLayout>
 </ContentPage>
