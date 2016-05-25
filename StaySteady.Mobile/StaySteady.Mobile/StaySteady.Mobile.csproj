@@ -49,6 +49,16 @@
     <Compile Include="Views\DailyActivity.xaml.cs">
       <DependentUpon>DailyActivity.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Exercise.cs" />
+    <Compile Include="Views\Exercise1_.xaml.cs">
+      <DependentUpon>Exercise1_.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Exercise2_.xaml.cs">
+      <DependentUpon>Exercise2_.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Exercise3_.xaml.cs">
+      <DependentUpon>Exercise3_.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FallDetectedPage.xaml.cs">
       <DependentUpon>FallDetectedPage.xaml</DependentUpon>
     </Compile>
@@ -141,6 +151,20 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\AddReminderPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Exercise1_.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Exercise2_.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Exercise3_.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

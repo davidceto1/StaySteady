@@ -7,7 +7,7 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace StaySteady.Mobile
+namespace StaySteady.Mobile.Views
 {
 	/*
 	public class Exercise : TabbedPage
@@ -24,9 +24,9 @@ namespace StaySteady.Mobile
 	{
 		public Exercise ()
 		{
-			this.Children.Add (new Exercise1Xaml ());
-			this.Children.Add (new Exercise2Xaml ());
-			this.Children.Add (new Exercise3Xaml ());
+			this.Children.Add (new Exercise1_ ());
+			this.Children.Add (new Exercise2_ ());
+			this.Children.Add (new Exercise3_ ());
 		}
 	}
 }

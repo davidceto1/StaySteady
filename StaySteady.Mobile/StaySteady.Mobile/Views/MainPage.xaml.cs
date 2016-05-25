@@ -41,5 +41,10 @@ namespace StaySteady.Mobile.Views
         {
             Navigation.PushAsync(new AddReminderPage());
         }
+
+        private void Tutorial_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Exercise());
+        }
     }
 }

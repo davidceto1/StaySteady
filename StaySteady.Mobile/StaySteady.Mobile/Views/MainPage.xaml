@@ -13,6 +13,7 @@
       <Button Text="View Daily Report" HorizontalOptions="Center"  Clicked="GoRelative"></Button>
       <Button Text="Fall detection" HorizontalOptions="Center"  Clicked="Button_OnClicked"></Button>
       <Button Text="Add exercise reminder" HorizontalOptions="Center"  Clicked="AddReminderButton_Clicked"></Button>
+      <Button Text="View Excercises" HorizontalOptions="Center"  Clicked="Tutorial_Clicked"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

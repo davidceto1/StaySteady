@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StaySteady.Mobile.Views.Exercise2_" BackgroundColor="White">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
+  <ScrollView>
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100*" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="Yellow" BackgroundColor="Olive" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+
+      <Label Text="Stability Rate 83%" FontSize="25" TextColor="Gray" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+      <Label Text="Jumping Jack" FontSize="20" TextColor="Olive" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+      <Image Source="jumpingjack.jpg" Grid.Row="3" Grid.Column="0"/>
+
+      <Label Text="Jump off the balls of your feet as you perform this classic exercise." FontSize="15" Grid.Row="4" Grid.Column="0"/>
+      <Label Text="To modify, step the legs wide and then step them together instead of jumping." FontSize="15" Grid.Row="5" Grid.Column="0"/>
+    </Grid>
+
+  </ScrollView>
+</ContentPage>
