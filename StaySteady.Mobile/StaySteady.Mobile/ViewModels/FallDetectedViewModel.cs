@@ -36,6 +36,11 @@ namespace StaySteady.Mobile.ViewModels
 
         private void CallEmergencyNumber()
         {
+            CallEmergency();
+        }
+
+        private void CallEmergency()
+        {
             _dialer.Dial("000");
         }
 
@@ -48,8 +53,18 @@ namespace StaySteady.Mobile.ViewModels
         {
             Device.StartTimer(new TimeSpan(0, 0, 0, 1), () =>
             {
-                Model.CountDownInteger--;
-                return true;
+                if (Model.CountDownInteger > 0)
+                {
+                    Model.CountDownInteger--;
+                    return true;
+                }
+                else
+                {
+                    CallEmergency();
+                    return false;
+                }
+                    
+                
             });
         }
     }
