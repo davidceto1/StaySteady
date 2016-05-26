@@ -21,7 +21,7 @@ namespace StaySteady.Mobile.Views
         {
             InitializeComponent();
             _ViewModel = new FallDetectedViewModel(DependencyService.Get<INavigationService>());
-            this.BindingContext = _ViewModel;
+            this.BindingContext = _ViewModel;         
             
         }
     }
