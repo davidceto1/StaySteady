@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
+using StaySteady.Mobile.Models;
 using StaySteady.Mobile.Utility;
 using Xamarin.Forms;
 
@@ -23,6 +24,8 @@ namespace StaySteady.Mobile
             Navigation = MainPage.Navigation;
 
             DependencyService.Register<INavigationService,NavigationService>();
+
+            DatabaseService.GetInstance.InitializeDB();
         }
 
         protected override void OnStart()
