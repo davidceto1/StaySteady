@@ -70,11 +70,11 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+     <Compile Include="Views\SummaryPage.xaml.cs">
+      <DependentUpon>SummaryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ReportPage.xaml.cs">
       <DependentUpon>ReportPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SummaryPage.xaml.cs">
-      <DependentUpon>SummaryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Patient.cs" />
     <Compile Include="ViewModels\PatientBody.cs" />
@@ -123,8 +123,6 @@
     <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
-    <None Include="Views\ReportPage.xaml" />
-    <None Include="Views\SummaryPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DailyActivity.xaml">
@@ -167,7 +165,7 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-     <EmbeddedResource Include="Views\SummaryPage.xaml">
+    <EmbeddedResource Include="Views\SummaryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

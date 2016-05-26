@@ -32,7 +32,6 @@ namespace StaySteady.Mobile.Views
         {
 			Patient newPaitent = new Patient ();
 			newPaitent.Name = "Soul";
-
 			Navigation.PushAsync(new ReportPage(newPaitent));
         }
 
