@@ -12,19 +12,19 @@ namespace StaySteady.Mobile
 			name = patientMary.Name;
 		}
 //
-		public string PatientName
-		{
-			set {
-				if (name != value)
-				{
-					name = value;
-
-				}
-			}
-
-		
-			get { return name; }
-		}
+		public string PatientName{set;get;}
+//		{
+//			set {
+//				if (name != value)
+//				{
+//					name = value;
+//
+//				}
+//			}
+//
+//		
+//			get { return name; }
+//		}
 
 	}
 }
