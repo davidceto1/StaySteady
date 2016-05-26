@@ -3,12 +3,13 @@
 	<ContentPage.Content>
 	  <Grid>
     <Grid.RowDefinitions>
-      <RowDefinition Height="10*" />
-      <RowDefinition Height="35*" />
-      <RowDefinition Height="10*" />
-      <RowDefinition Height="30*" />
-      <RowDefinition Height="5*" />
-      <RowDefinition Height="10*" />
+      <RowDefinition Height="7*" />
+      <RowDefinition Height="7*" />
+      <RowDefinition Height="50*" />
+      <RowDefinition Height="7*" />
+      <RowDefinition Height="23*" />
+      <RowDefinition Height="6*" />
+
     </Grid.RowDefinitions>
 
     <Grid.ColumnDefinitions>
@@ -16,32 +17,40 @@
       <ColumnDefinition Width="50*" />
     </Grid.ColumnDefinitions>
 
-         <Label Text="Linda, You are doing great !"
-           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+      <Label Text="Daily Activity"
+        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+        FontSize="30"
+        TextColor="#54211d"
+             
+        XAlign="Center"
+        YAlign="Center"/>
+
+
+      
+             <Label Text="{Binding Model.MyName}"
+           Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
            FontSize="Large"
-           TextColor="#2ECC71"
            XAlign="Center"
            YAlign="Center"/>
 
-    <Image Source="http://www.chachingqueen.com/wp-content/uploads/2014/01/IMG_3180.png"
-             Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+    <Image Source="DailyActivity_main.png"
+             Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Aspect="Fill" />
 
  
 
-    <Label Text="You have improved your stability by 12%"
-           Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-           TextColor="#2ECC71"
+    <Label Text="{Binding Model.MyStabilityRate}"
+           Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
            FontSize="Medium"
            XAlign="Center"
            YAlign="Center"/>
    
-    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
 
     <Grid.RowDefinitions>
-      <RowDefinition Height="25*" />
-      <RowDefinition Height="25*" />
-      <RowDefinition Height="25*" />
-      <RowDefinition Height="25*" />
+      <RowDefinition Height="31*" />
+      <RowDefinition Height="23*" />
+      <RowDefinition Height="23*" />
+      <RowDefinition Height="23*" />
     </Grid.RowDefinitions>
 
     <Grid.ColumnDefinitions>
@@ -57,46 +66,46 @@
            XAlign="Center"
            YAlign="Center"/>
 
-    <Image Source="http://a.toda.ro/1.png"
+    <Image Source="DailyActivity_1.png"
              Grid.Row="1" Grid.Column="0" />
     
-    <Label Text="Saul"
+    <Label Text="{Binding Model.UserName0}"
            Grid.Row="1" Grid.Column="1"
            FontSize="Large"
            XAlign="Center"
            YAlign="Center" />
 
-    <Label Text="20%"
+    <Label Text="{Binding Model.Stability0}"
            Grid.Row="1" Grid.Column="2"
            FontSize="Large"
            XAlign="Center"
            YAlign="Center"/>
 
-    <Image Source="http://a.toda.ro/2.png"
+    <Image Source="DailyActivity_2.png"
              Grid.Row="2" Grid.Column="0" />
     
-    <Label Text="You"
+    <Label Text="{Binding Model.UserName1}"
            Grid.Row="2" Grid.Column="1"
            FontSize="Large"
            XAlign="Center"
            YAlign="Center"/>
 
-    <Label Text="12%"
+    <Label Text="{Binding Model.Stability1}"
            Grid.Row="2" Grid.Column="2"
            FontSize="Large"
            XAlign="Center"
            YAlign="Center" />
 
-    <Image Source="http://a.toda.ro/3.png"
+    <Image Source="DailyActivity_3.png"
              Grid.Row="3" Grid.Column="0" />
     
-    <Label Text="Kim"
+    <Label Text="{Binding Model.UserName2}"
            Grid.Row="3" Grid.Column="1"
            FontSize="Large"
            XAlign="Center"
            YAlign="Center" />
 
-    <Label Text="9%"
+    <Label Text="{Binding Model.Stability2}"
            Grid.Row="3" Grid.Column="2"
            FontSize="Large"
            XAlign="Center"
@@ -104,16 +113,7 @@
 
 
     </Grid>
-    <Button Text=" Emergency"
-           Grid.Row="5" Grid.Column="0"
-           BorderWidth = "1"
-           TextColor="Red" />
- 
 
-    <Button Text="Cancel "
-           Grid.Row="5" Grid.Column="1"
-           BorderWidth = "1"
-           TextColor="Red" />
   </Grid>
 
 	</ContentPage.Content>
