@@ -2,9 +2,9 @@
 
 namespace StaySteady.Mobile.Models
 {
-	public class SummaryPageModel
+	public class SummaryModel
 	{
-		public SummaryPageModel ()
+		public SummaryModel ()
 		{
 		}
 	}

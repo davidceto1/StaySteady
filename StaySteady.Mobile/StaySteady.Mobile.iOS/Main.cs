@@ -17,8 +17,9 @@ namespace StaySteady.Mobile.iOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
-            UIApplication.Main(args, null, "AppDelegate");
-            DependencyService.Register<IDialer,PhoneDialer>();
+			DependencyService.Register<IDialer,PhoneDialer>();
+			UIApplication.Main(args, null, "AppDelegate");
+            
         }
     }
 }

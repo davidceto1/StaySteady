@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StaySteady.Mobile.Views.SummaryPage2">
+             x:Class="StaySteady.Mobile.Views.SummaryPage" Title="Summary">
+
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness"
+					iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>
+
   <StackLayout Orientation="Vertical">
 
 
@@ -12,14 +18,14 @@
 				>
 
       <Grid.RowDefinitions>
-        <RowDefinition Height="140" />
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
         <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
+<!--        <RowDefinition Height="*" />-->
 
       </Grid.RowDefinitions>
 
@@ -33,12 +39,12 @@
 
 
 
-      <Label Text="Summary"
+<!--      <Label Text=""
              Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
              FontSize="30"
              TextColor="#54211d"
              XAlign="Center"
-             YAlign="Center"/>
+             YAlign="Center"/>-->
 
       <Label Text="Patient"
          BackgroundColor = "#009ad6"
@@ -77,7 +83,7 @@
              YAlign="Center"/>
 
 
-      <Label Text="More"
+      <Label Text="Detail"
          BackgroundColor = "#009ad6"
              Grid.Row="1" Grid.Column="4"
          FontAttributes = "Bold"
@@ -120,13 +126,22 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="(0)Check"
+<!--      <Label Text="(0)Check"
          BackgroundColor = "#8a2e3b"
              Grid.Row="2" Grid.Column="4"
              FontSize="15"
          TextColor="#f2eada"
              XAlign="Center"
-             YAlign="Center"/>
+             YAlign="Center"/>-->
+
+       <Button Text = "Check"
+			Grid.Row="2" Grid.Column="4" 
+			BackgroundColor = "#8a2e3b"
+			FontSize="15"
+			BorderWidth = "0"
+			BorderRadius = "0"
+           	TextColor="#f2eada" 
+           	Command = "{Binding TakeNextAction}"/>
 
       <Label Text="Amy"
          BackgroundColor = "#8a2e3b"
@@ -162,13 +177,22 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="(0)Check"
+<!--      <Label Text="(0)Check"
          BackgroundColor = "#8a2e3b"
              Grid.Row="3" Grid.Column="4"
              FontSize="15"
          TextColor="#f2eada"
              XAlign="Center"
-             YAlign="Center"/>
+             YAlign="Center"/>-->
+
+          <Button Text = "Check"
+			Grid.Row="3" Grid.Column="4" 
+			BackgroundColor = "#8a2e3b"
+			FontSize="15"
+			BorderWidth = "0"
+			BorderRadius = "0"
+           	TextColor="#f2eada" 
+           	Command = "{Binding TakeNextAction}"/>
 
       <Label Text="Mariah"
          BackgroundColor = "#8a2e3b"
@@ -204,19 +228,29 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="(0)Check"
+<!--      <Label Text="(0)Check"
          BackgroundColor = "#8a2e3b"
              Grid.Row="4" Grid.Column="4"
              FontSize="15"
          TextColor="#f2eada"
              XAlign="Center"
-             YAlign="Center"/>
+             YAlign="Center"/>-->
 
-      <Label Text="Volerie"
+           <Button Text = "Check"
+			Grid.Row="4" Grid.Column="4" 
+			BackgroundColor = "#8a2e3b"
+			FontSize="15"
+			BorderWidth = "0"
+			BorderRadius = "0"
+           	TextColor="#f2eada" 
+           	Command = "{Binding TakeNextAction}"/>  
+
+    <Label x:Name = "patientName_e"
+     Text = "{Binding PatientName5, StringFormat='{0}'}"
      BackgroundColor = "#8a2e3b"
          Grid.Row="5" Grid.Column="0"
          FontSize="20"
-     TextColor="#f2eada"
+     	TextColor="#f2eada"
          XAlign="Center"
          YAlign="Center"/>
 
@@ -246,28 +280,37 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="(0)Check"
+<!--      <button Text="(0)Check"
          BackgroundColor = "#8a2e3b"
              Grid.Row="5" Grid.Column="4"
              FontSize="15"
          TextColor="#f2eada"
              XAlign="Center"
-             YAlign="Center"/>
+             YAlign="Center"/>-->
 
-      <Label Text=" "
+    <Button Text = "Check"
+			Grid.Row="5" Grid.Column="4" 
+			BackgroundColor = "#8a2e3b"
+			FontSize="15"
+			BorderWidth = "0"
+			BorderRadius = "0"
+           	TextColor="#f2eada" 
+           	Command = "{Binding TakeNextAction}"/>  
+
+<!--      <Label Text=" "
 		   
              Grid.Row="6" Grid.Column="4"
              FontSize="20"
              XAlign="Center"
-             YAlign="Center"/>
+             YAlign="Center"/>-->
 
-      <Button Text = "Back"
+<!--      <Button Text = "Back"
 			Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"
 			BackgroundColor = "#c1a173"
 			FontSize="20"
 			BorderWidth = "1"
            	TextColor="White"
-			WidthRequest = "200" />
+			WidthRequest = "200" />-->
 
     </Grid>
 
