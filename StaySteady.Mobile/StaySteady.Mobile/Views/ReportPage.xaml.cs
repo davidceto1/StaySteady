@@ -19,11 +19,19 @@ namespace StaySteady.Mobile.Views
 
             InitializeComponent();
 			_viewModel = new  SummaryViewModel (DependencyService.Get<INavigationService>());
-			_viewModel.PatientName5 = patient.Name;
+
+			_viewModel.Name1 = patient.Name;
+			_viewModel.Risk1 = patient.Risk;
+			_viewModel.Age1 = patient.Age;
+			_viewModel.HeartRate1 = patient.HeartRate;
+			_viewModel.LastUpdate1 = patient.LastUpdate;
+			_viewModel.Stability1 = patient.Stability;
+			_viewModel.Temperature1 = patient.Temperature;
+
 			this.BindingContext = _viewModel;
 
         }
 
-		//public string Name {set; get;}
+	
     }
 }

@@ -6,25 +6,13 @@ namespace StaySteady.Mobile
 {
 	public class ReportViewModel:ViewModelBase
 	{
-		string name;
-		public ReportViewModel (Patient patientMary)
+
+		public ReportViewModel ()
 		{
-			name = patientMary.Name;
+
 		}
-//
-		public string PatientName{set;get;}
-//		{
-//			set {
-//				if (name != value)
-//				{
-//					name = value;
-//
-//				}
-//			}
-//
-//		
-//			get { return name; }
-//		}
+
+
 
 	}
 }

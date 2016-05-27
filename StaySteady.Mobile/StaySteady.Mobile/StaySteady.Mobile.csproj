@@ -70,14 +70,13 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-     <Compile Include="Views\SummaryPage.xaml.cs">
+    <Compile Include="Views\SummaryPage.xaml.cs">
       <DependentUpon>SummaryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ReportPage.xaml.cs">
       <DependentUpon>ReportPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Patient.cs" />
-    <Compile Include="ViewModels\PatientBody.cs" />
     <Compile Include="ViewModels\ReportViewModel.cs" />
     <Compile Include="ViewModels\SummaryViewModel.cs" />
   </ItemGroup>
