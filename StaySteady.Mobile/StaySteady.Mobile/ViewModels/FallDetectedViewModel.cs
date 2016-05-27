@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
@@ -17,6 +21,13 @@ namespace StaySteady.Mobile.ViewModels
         private IDialer _dialer;
         private INavigationService _navigationService;
 
+        HttpClient _httpClient
+        {
+            get;
+            set;
+        }
+
+
         public FallDetectedViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -26,6 +37,7 @@ namespace StaySteady.Mobile.ViewModels
             Model = new FallDetectedModel();
             Model.CountDownInteger = 30;
             ExecuteTimer();
+            _httpClient =  new HttpClient();
         }
 
         public FallDetectedModel Model { get; set; }
@@ -41,7 +53,8 @@ namespace StaySteady.Mobile.ViewModels
 
         private void CallEmergency()
         {
-            _dialer.Dial("000");
+            ExecuteServiceCall();
+            _dialer.Dial("698");
         }
 
         private void GoBack()
@@ -66,6 +79,17 @@ namespace StaySteady.Mobile.ViewModels
                     
                 
             });
+        }
+
+        private async void ExecuteServiceCall()
+        {
+            string staySteadyEmergencyUrl =
+                @"http://staysteady.azurewebsites.net/api/values/NotifyFall?ZUMO-API-VERSION=2.0.0";
+
+
+            var response =  await _httpClient.PostAsync(staySteadyEmergencyUrl,null);
+
+            var algo = "";
         }
     }
 }
