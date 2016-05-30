@@ -33,6 +33,7 @@ namespace StaySteady.Mobile.Utility
         public void InitializeDB()
         {
             CreateIfNotExists(typeof(TestModel));
+            CreateIfNotExists(typeof(AddReminderModel));
         }
 
         private void CreateIfNotExists(Type dataType)
