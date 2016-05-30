@@ -38,6 +38,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Models\DailyActivityModel.cs" />
     <Compile Include="Models\FallDetectedModel.cs" />
+    <Compile Include="Models\AddReminderModel.cs" />
     <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -46,6 +47,7 @@
     <Compile Include="Utility\ISQLite.cs" />
     <Compile Include="Utility\NavigationService.cs" />
     <Compile Include="Utility\StaySteadyManager.cs" />
+    <Compile Include="ViewModels\AddReminderViewModel.cs" />
     <Compile Include="ViewModels\DailyActivityViewModel.cs" />
     <Compile Include="ViewModels\FallDetectedViewModel.cs" />
     <Compile Include="Views\AddReminderPage.xaml.cs">

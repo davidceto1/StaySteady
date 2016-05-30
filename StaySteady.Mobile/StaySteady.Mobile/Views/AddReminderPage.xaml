@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StaySteady.Mobile.Views.AddReminderPage" Title="Add exercise reminder">
   <StackLayout Orientation="Vertical">
-    <Editor TextColor="#7f8c8d" BackgroundColor="White" HeightRequest="150">
+    <Editor TextColor="#7f8c8d" BackgroundColor="White" HeightRequest="150" Text="{Binding Model.ReminderText}">
     </Editor>
-    <DatePicker ></DatePicker>
-    <TimePicker></TimePicker>
-    <Button Text="Add"></Button>
+    <DatePicker Date="{Binding Model.Date}" ></DatePicker>
+    <TimePicker Time="{Binding Model.Time}"></TimePicker>
+    <Button Text="Add" Command="{Binding AddReminder}"></Button>
     <Button Text="Cancel"></Button>
   </StackLayout>
 </ContentPage>
