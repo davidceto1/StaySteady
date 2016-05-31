@@ -32,6 +32,7 @@ namespace StaySteady.Mobile
 			allPatients = SummaryModel.CreatePatientData ();
 			Name = allPatients [WhichPatient].Name;
 			Risk = allPatients [WhichPatient].Risk;
+			Age = allPatients [WhichPatient].Age;
 			HeartRate = allPatients [WhichPatient].HeartRate;
 			LastUpdate = allPatients [WhichPatient].LastUpdate;
 			Stability = allPatients [WhichPatient].Stability;
