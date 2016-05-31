@@ -1,77 +1,129 @@
 ﻿using System;
 using System.Windows.Input;
+using System.Collections.Generic;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
 using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
 using StaySteady.Mobile.Utility;
 using StaySteady.Mobile.Views;
+//using StaySteady.Mobile.Models;
 
 using StaySteady.Mobile.Models;
 
 namespace StaySteady.Mobile.ViewModels
 {
+	
+
 	public class SummaryViewModel:ViewModelBase
 	{
-		private int whichButtonClicked = 0;
+		//private ReportModel reportModel;
+//		private SummaryModel summaryModelData;
+//		private int number;
+//		private Patient[] thisPatient = SummaryModelData.CreatePatientData();
+
+//		int numberOfPeople;
+//		numberOfPeople = SummaryModelData.PatientNum;
+//		Patient[] thisPatient = new Patient[numberOfPeople];
+//		number=4; 
+//			summaryModelData.GetNumber();
+
+		//private Patient[] thisPatient = new Patient[SummaryModelData.GetNumber()];
+
+		int indexOfPatients=0;
+		List<Patient> patientArray = new List<Patient> ();
+		Patient thisPatient = new Patient();
+
+
+//		public SummaryViewModel (INavigationService navigationService)
+//		{
+//			TakeNextAction1 = new Command (ShowMessage1);
+//
+//			TakeNextAction2 = new Command (ShowMessage2);
+//
+//			TakeNextAction3 = new Command (ShowMessage3);
+//
+//			TakeNextAction4 = new Command (ShowMessage4);
+//		}
+	
+
 		public SummaryViewModel (INavigationService navigationService)
 		{
-//			WhichButtonClicked = 1;
+			
+			patientArray = SummaryModel.CreatePatientData ();
+
+
+			int i = 0;
+			Name1 = patientArray [i].Name;
+			Risk1 = patientArray [i].Risk;
+			Age1 = patientArray [i].Age;
+			HeartRate1 = patientArray [i].HeartRate;
+			LastUpdate1 = patientArray [i].LastUpdate;
+			Stability1 = patientArray [i].Stability;
+			Temperature1 = patientArray [i].Temperature;
+			i = 1;
+			Name2 = patientArray [i].Name;
+			Risk2 = patientArray [i].Risk;
+			Age2 = patientArray [i].Age;
+			HeartRate2 = patientArray [i].HeartRate;
+			LastUpdate2 = patientArray [i].LastUpdate;
+			Stability2 = patientArray [i].Stability;
+			Temperature2 = patientArray [i].Temperature;
+			i = 2;
+			Name3 = patientArray [i].Name;
+			Risk3 = patientArray [i].Risk;
+			Age3 = patientArray [i].Age;
+			HeartRate3 = patientArray [i].HeartRate;
+			LastUpdate3 = patientArray [i].LastUpdate;
+			Stability3 = patientArray [i].Stability;
+			Temperature3 = patientArray [i].Temperature;
+			i = 3;
+			Name4 = patientArray [i].Name;
+			Risk4 = patientArray [i].Risk;
+			Age4 = patientArray [i].Age;
+			HeartRate4 = patientArray [i].HeartRate;
+			LastUpdate4 = patientArray [i].LastUpdate;
+			Stability4 = patientArray [i].Stability;
+			Temperature4 = patientArray [i].Temperature;
+
 			TakeNextAction1 = new Command (ShowMessage1);
-//			WhichButtonClicked = 2;
+
 			TakeNextAction2 = new Command (ShowMessage2);
-//			WhichButtonClicked = 3;
+
 			TakeNextAction3 = new Command (ShowMessage3);
-//			WhichButtonClicked = 4;
+
 			TakeNextAction4 = new Command (ShowMessage4);
 		}
-	
+
 
 		private void ShowMessage1()
 		{
-			Patient thisPatient = new Patient(Risk1, LastUpdate1, Name1, Age1, Stability1, Temperature1, HeartRate1);
-//			switch(WhichButtonClicked)
-//			{
-//			case 1:
-//				thisPatient = new Patient (Risk1, LastUpdate1, Name1, Age1, Stability1, Temperature1, HeartRate1);
-//				break;
-//			case 2:
-//				thisPatient = new Patient (Risk2, LastUpdate2, Name2, Age2, Stability2, Temperature2, HeartRate2);
-//				break;
-//			case 3:
-//				thisPatient = new Patient (Risk3, LastUpdate3, Name3, Age3, Stability3, Temperature3, HeartRate3);
-//				break;
-//			case 4:
-//				thisPatient = new Patient (Risk4, LastUpdate4, Name4, Age4, Stability4, Temperature4, HeartRate4);
-//				break;
-//			default: 
-//				break;	
-//			}
+			//Patient thisPatient = new Patient(Risk1, LastUpdate1, Name1, Age1, Stability1, Temperature1, HeartRate1);
 
-			ReportPage thisPatientReport = new ReportPage (thisPatient);
-			App.Navigation.PushAsync(thisPatientReport);
+			//ReportPage thisPatientReport = new ReportPage ();
+			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),0);
+//			viewModelOfReport.WhichPatient = 0;
+			App.Navigation.PushAsync(new ReportPage (0));
 
 		}
 
 		private void ShowMessage2()
 		{
-			Patient thisPatient = new Patient (Risk2, LastUpdate2, Name2, Age2, Stability2, Temperature2, HeartRate2);
-			ReportPage thisPatientReport = new ReportPage (thisPatient);
-			App.Navigation.PushAsync(thisPatientReport);
+
+			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),1);
+			App.Navigation.PushAsync(new ReportPage (1));
 
 		}
 		private void ShowMessage3()
 		{
-			Patient thisPatient = new Patient (Risk3, LastUpdate3, Name3, Age3, Stability3, Temperature3, HeartRate3);
-			ReportPage thisPatientReport = new ReportPage (thisPatient);
-			App.Navigation.PushAsync(thisPatientReport);
+			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),2);
+			App.Navigation.PushAsync(new ReportPage (2));
 
 		}
 		private void ShowMessage4()
 		{
-			Patient thisPatient = new Patient (Risk4, LastUpdate4, Name4, Age4, Stability4, Temperature4, HeartRate4);
-			ReportPage thisPatientReport = new ReportPage (thisPatient);
-			App.Navigation.PushAsync(thisPatientReport);
+			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),3);
+			App.Navigation.PushAsync(new ReportPage (3));
 
 		}
 
@@ -113,7 +165,9 @@ namespace StaySteady.Mobile.ViewModels
 		public DateTime LastUpdate4{ set; get;}
 		public int Age4{ set; get;}
 
-		public int WhichButtonClicked{ set; get;}
+//		public SummaryModel SummaryModelData { get; set; }
+//		public ReportViewModel ReportViewData { get; set; }
+
 	}
 }
 

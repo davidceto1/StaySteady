@@ -12,25 +12,26 @@ namespace StaySteady.Mobile.Views
 {
     public partial class ReportPage : ContentPage
     {
-		private SummaryViewModel _viewModel;
+		
+		private ReportViewModel viewModelOfReport;
 
-		public ReportPage(Patient patient)
-        {
+		public ReportPage()
+		{
 
-            InitializeComponent();
-			_viewModel = new  SummaryViewModel (DependencyService.Get<INavigationService>());
+			InitializeComponent();
+			viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>());
+			this.BindingContext = viewModelOfReport;
 
-			_viewModel.Name1 = patient.Name;
-			_viewModel.Risk1 = patient.Risk;
-			_viewModel.Age1 = patient.Age;
-			_viewModel.HeartRate1 = patient.HeartRate;
-			_viewModel.LastUpdate1 = patient.LastUpdate;
-			_viewModel.Stability1 = patient.Stability;
-			_viewModel.Temperature1 = patient.Temperature;
+		}
 
-			this.BindingContext = _viewModel;
+		public ReportPage(int whichOne)
+		{
 
-        }
+			InitializeComponent();
+			viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),whichOne);
+			this.BindingContext = viewModelOfReport;
+		}
+
 
 	
     }

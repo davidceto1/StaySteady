@@ -1,18 +1,56 @@
 ﻿using System;
 using GalaSoft.MvvmLight;
 using System.ComponentModel;
+using StaySteady.Mobile.Models;
+using GalaSoft.MvvmLight.Views;
+using System.Collections.Generic;
 
 namespace StaySteady.Mobile
 {
 	public class ReportViewModel:ViewModelBase
 	{
 
-		public ReportViewModel ()
+		List<Patient> allPatients = new List<Patient> ();
+
+		public ReportViewModel (INavigationService navigationService)
 		{
+			WhichPatient = 0;
+			allPatients = SummaryModel.CreatePatientData ();
+			Name = allPatients [WhichPatient].Name;
+			Risk = allPatients [WhichPatient].Risk;
+			Age = allPatients [WhichPatient].Age;
+			HeartRate = allPatients [WhichPatient].HeartRate;
+			LastUpdate = allPatients [WhichPatient].LastUpdate;
+			Stability = allPatients [WhichPatient].Stability;
+			Temperature = allPatients [WhichPatient].Temperature;
 
 		}
 
+		public ReportViewModel (INavigationService navigationService, int i)
+		{
+			WhichPatient = i;
+			allPatients = SummaryModel.CreatePatientData ();
+			Name = allPatients [WhichPatient].Name;
+			Risk = allPatients [WhichPatient].Risk;
+			HeartRate = allPatients [WhichPatient].HeartRate;
+			LastUpdate = allPatients [WhichPatient].LastUpdate;
+			Stability = allPatients [WhichPatient].Stability;
+			Temperature = allPatients [WhichPatient].Temperature;
 
+		}
+
+			
+
+		public string Name{ set; get;}
+		public string Risk{ set; get;}
+		public string HeartRate{ set; get;}
+		public string Stability{ set; get;}
+		public string Temperature{ set; get;}
+		public DateTime LastUpdate{ set; get;}
+		public int Age{ set; get;}
+
+		public SummaryModel SummaryModelData { get; set; }
+		public int WhichPatient  { get; set; }
 
 	}
 }

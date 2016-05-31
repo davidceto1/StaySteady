@@ -54,7 +54,7 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="{Binding Risk1,StringFormat='{0}'}"
+		<Label Text="{Binding Risk,StringFormat='{0}'}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
@@ -71,7 +71,7 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="{Binding LastUpdate1,StringFormat='{0:G}'}"
+		<Label Text="{Binding LastUpdate,StringFormat='{0:G}'}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="15"
@@ -90,7 +90,7 @@
            YAlign="Center"/>
 
 		<Label x:Name = "patientName"
-			Text = "{Binding Name1, StringFormat='{0}',Mode=TwoWay}"
+			Text = "{Binding Name, StringFormat='{0}',Mode=TwoWay}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
@@ -107,7 +107,7 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="{Binding Age1,StringFormat='{0}'}"
+		<Label Text="{Binding Age,StringFormat='{0}'}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
@@ -124,7 +124,7 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="{Binding Stability1,StringFormat='{0}'}"
+		<Label Text="{Binding Stability,StringFormat='{0}'}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
@@ -141,7 +141,7 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="{Binding Temperature1,StringFormat='{0}'}"
+		<Label Text="{Binding Temperature,StringFormat='{0}'}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
@@ -158,7 +158,7 @@
            XAlign="Center"
            YAlign="Center"/>
 
-		<Label Text="{Binding HeartRate1,StringFormat='{0}'}"
+		<Label Text="{Binding HeartRate,StringFormat='{0}'}"
 		   BackgroundColor = "#f15a22"
            Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"

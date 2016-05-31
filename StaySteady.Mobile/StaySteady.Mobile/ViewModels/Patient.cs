@@ -5,13 +5,12 @@ namespace StaySteady.Mobile
 {
 	public class Patient:ViewModelBase
 	{
-//		private string name,risk,heartRate,stability,temperature;
-//		private DateTime lastUpdate;
-//		private int age;
-//		double stability,temperature;
+		//private ReportModel modelForReport;
 
 		public Patient ()
 		{
+			
+
 		}
 
 		public Patient (string namePatient){
@@ -27,11 +26,7 @@ namespace StaySteady.Mobile
 			Temperature = temperatureP;
 			HeartRate = hearRateP;
 		}
-//		public string Name {
-//
-//			set { SetProperty (ref name, value); }
-//			get { return name; }
-//		}
+
 
 		public string Name{ set; get;}
 		public string Risk{ set; get;}
