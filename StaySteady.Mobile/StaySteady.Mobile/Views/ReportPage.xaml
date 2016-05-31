@@ -46,141 +46,141 @@
            YAlign="Center"/>-->
 
 		<Label Text="Risk of Fall"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 		   FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"		
+		   TextColor="#2C3E50"		
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="{Binding Risk,StringFormat='{0}'}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#34495E"
            XAlign="Center"
            YAlign="Center"/>
 			
 		<Label Text="LastUpdate"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
            FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="{Binding LastUpdate,StringFormat='{0:G}'}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="15"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 			
 
 		<Label Text="Patient name"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 		   FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"		
+		   TextColor="#2C3E50"		
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label x:Name = "patientName"
 			Text = "{Binding Name, StringFormat='{0}',Mode=TwoWay}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 			
 		<Label Text="Age"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
            FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="{Binding Age,StringFormat='{0}'}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="Stability Rate"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
 		   FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"		
+		   TextColor="#2C3E50"		
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="{Binding Stability,StringFormat='{0}'}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 			
 		<Label Text="Temperature"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
            FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="{Binding Temperature,StringFormat='{0}'}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="Heart Rate"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
 		   FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"		
+		   TextColor="#2C3E50"		
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="{Binding HeartRate,StringFormat='{0}'}"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
            Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 			
 		<Label Text="Obervations"
-		   BackgroundColor = "#8a2e3b"
+		   BackgroundColor = "#BDC3C7"
            Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"
            FontAttributes = "Bold"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
 		<Label Text="Previous falls"
-		   BackgroundColor = "#f15a22"
+		   BackgroundColor = "#ECF0F1"
 		  
            Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2"
            FontSize="20"
-		   TextColor="#f2eada"
+		   TextColor="#2C3E50"
            XAlign="Center"
            YAlign="Center"/>
 
@@ -192,8 +192,8 @@
 			
     	<Button Text="Book Appointment "
             Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"
-			BackgroundColor = "#c1a173"
-			FontSize="20"
+			BackgroundColor = "#2C3E50"
+			FontSize="18"
 			BorderWidth = "1"
            	TextColor="White"
 			WidthRequest = "200"
