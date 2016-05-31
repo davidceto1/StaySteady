@@ -17,35 +17,11 @@ namespace StaySteady.Mobile.ViewModels
 
 	public class SummaryViewModel:ViewModelBase
 	{
-		//private ReportModel reportModel;
-//		private SummaryModel summaryModelData;
-//		private int number;
-//		private Patient[] thisPatient = SummaryModelData.CreatePatientData();
-
-//		int numberOfPeople;
-//		numberOfPeople = SummaryModelData.PatientNum;
-//		Patient[] thisPatient = new Patient[numberOfPeople];
-//		number=4; 
-//			summaryModelData.GetNumber();
-
-		//private Patient[] thisPatient = new Patient[SummaryModelData.GetNumber()];
-
+		
 		int indexOfPatients=0;
 		List<Patient> patientArray = new List<Patient> ();
 		Patient thisPatient = new Patient();
 
-
-//		public SummaryViewModel (INavigationService navigationService)
-//		{
-//			TakeNextAction1 = new Command (ShowMessage1);
-//
-//			TakeNextAction2 = new Command (ShowMessage2);
-//
-//			TakeNextAction3 = new Command (ShowMessage3);
-//
-//			TakeNextAction4 = new Command (ShowMessage4);
-//		}
-	
 
 		public SummaryViewModel (INavigationService navigationService)
 		{
@@ -98,11 +74,7 @@ namespace StaySteady.Mobile.ViewModels
 
 		private void ShowMessage1()
 		{
-			//Patient thisPatient = new Patient(Risk1, LastUpdate1, Name1, Age1, Stability1, Temperature1, HeartRate1);
-
-			//ReportPage thisPatientReport = new ReportPage ();
-//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),0);
-//			viewModelOfReport.WhichPatient = 0;
+			
 			App.Navigation.PushAsync(new ReportPage (0));
 
 		}
@@ -110,19 +82,16 @@ namespace StaySteady.Mobile.ViewModels
 		private void ShowMessage2()
 		{
 
-//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),1);
-			App.Navigation.PushAsync(new ReportPage (1));
+		App.Navigation.PushAsync(new ReportPage (1));
 
 		}
 		private void ShowMessage3()
 		{
-//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),2);
 			App.Navigation.PushAsync(new ReportPage (2));
 
 		}
 		private void ShowMessage4()
 		{
-//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),3);
 			App.Navigation.PushAsync(new ReportPage (3));
 
 		}
@@ -165,8 +134,6 @@ namespace StaySteady.Mobile.ViewModels
 		public DateTime LastUpdate4{ set; get;}
 		public int Age4{ set; get;}
 
-//		public SummaryModel SummaryModelData { get; set; }
-//		public ReportViewModel ReportViewData { get; set; }
 
 	}
 }

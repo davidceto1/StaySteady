@@ -36,7 +36,6 @@ namespace StaySteady.Mobile.Models
 				curPatient.Name = ReportModel.GetPatientData (i, "Name");
 				curPatient.Age = int.Parse(ReportModel.GetPatientData (i, "Age"));
 				curPatient.HeartRate = ReportModel.GetPatientData (i, "HeartRate");
-//				curPatient.LastUpdate = DateTime.ParseExact(ReportModel.GetPatientData (i, "LastUpdate"), "G", null);
 				curPatient.LastUpdate = Convert.ToDateTime(ReportModel.GetPatientData(i,"LastUpdate"));
 				curPatient.Temperature = ReportModel.GetPatientData (i, "Temperature");
 				curPatient.Stability = ReportModel.GetPatientData (i, "Stability");

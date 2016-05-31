@@ -8,10 +8,7 @@ namespace StaySteady.Mobile
 		//set the threshold of the judgement of the risk
 		private const double THRELOW = 0.25;
 		private const double THREHIGH = 0.75;
-
-//		private int patientNum;
-//		private double stability;
-//		private string risk;
+	
 
 
 		public double Stability{get;set;}
