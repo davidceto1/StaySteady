@@ -14,11 +14,9 @@ namespace StaySteady.Mobile.ViewModels
     class DailyActivityViewModel: ViewModelBase
     {
 
-        private INavigationService _navigationService;
 
-        public DailyActivityViewModel(INavigationService navigationService)
+        public DailyActivityViewModel()
         {
-            _navigationService = navigationService;
             Model = new DailyActivityModel();
 
         }

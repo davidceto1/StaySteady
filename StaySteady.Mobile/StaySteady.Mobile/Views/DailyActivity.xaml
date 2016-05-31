@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StaySteady.Mobile.Views.DailyActivity">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StaySteady.Mobile.Views.DailyActivity" Title="Daily Activity">
 	<ContentPage.Content>
 	  <Grid>
     <Grid.RowDefinitions>
+      <RowDefinition Height="8*" />
+      <RowDefinition Height="55*" />
       <RowDefinition Height="7*" />
-      <RowDefinition Height="7*" />
-      <RowDefinition Height="50*" />
-      <RowDefinition Height="7*" />
-      <RowDefinition Height="23*" />
+      <RowDefinition Height="24*" />
       <RowDefinition Height="6*" />
 
     </Grid.RowDefinitions>
@@ -17,34 +16,24 @@
       <ColumnDefinition Width="50*" />
     </Grid.ColumnDefinitions>
 
-      <Label Text="Daily Activity"
-        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-        FontSize="30"
-        TextColor="#54211d"
-             
-        XAlign="Center"
-        YAlign="Center"/>
-
-
-      
-             <Label Text="{Binding Model.MyName}"
-           Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+    <Label Text="{Binding Model.MyName}"
+           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
            FontSize="Large"
            XAlign="Center"
            YAlign="Center"/>
 
     <Image Source="DailyActivity_main.png"
-             Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Aspect="Fill" />
+             Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Aspect="Fill" />
 
  
 
     <Label Text="{Binding Model.MyStabilityRate}"
-           Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+           Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
            FontSize="Medium"
            XAlign="Center"
            YAlign="Center"/>
    
-    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
 
     <Grid.RowDefinitions>
       <RowDefinition Height="31*" />
