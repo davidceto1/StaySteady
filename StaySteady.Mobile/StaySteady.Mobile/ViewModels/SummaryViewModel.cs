@@ -101,7 +101,7 @@ namespace StaySteady.Mobile.ViewModels
 			//Patient thisPatient = new Patient(Risk1, LastUpdate1, Name1, Age1, Stability1, Temperature1, HeartRate1);
 
 			//ReportPage thisPatientReport = new ReportPage ();
-			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),0);
+//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),0);
 //			viewModelOfReport.WhichPatient = 0;
 			App.Navigation.PushAsync(new ReportPage (0));
 
@@ -110,19 +110,19 @@ namespace StaySteady.Mobile.ViewModels
 		private void ShowMessage2()
 		{
 
-			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),1);
+//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),1);
 			App.Navigation.PushAsync(new ReportPage (1));
 
 		}
 		private void ShowMessage3()
 		{
-			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),2);
+//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),2);
 			App.Navigation.PushAsync(new ReportPage (2));
 
 		}
 		private void ShowMessage4()
 		{
-			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),3);
+//			ReportViewModel viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),3);
 			App.Navigation.PushAsync(new ReportPage (3));
 
 		}
