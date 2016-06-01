@@ -25,7 +25,7 @@ namespace StaySteady.Mobile
 
             DependencyService.Register<INavigationService,NavigationService>();
 
-            DatabaseService.GetInstance.InitializeDB();
+            DatabaseService.GetInstance().InitializeDB();
         }
 
         protected override void OnStart()

@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using GalaSoft.MvvmLight.Views;
+using StaySteady.Mobile.ViewModels;
 using Xamarin.Forms;
 
 namespace StaySteady.Mobile.Views
 {
-    public partial class Exercise2_ : ContentPage
+    public partial class BookAppointmentPage : ContentPage
     {
-        public Exercise2_()
+        public BookAppointmentPage()
         {
-            //Title = "Exercise 2";
-            Icon = "icon.png";
             InitializeComponent();
         }
     }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StaySteady.Mobile.Views.Exercise2_" BackgroundColor="White">
+             x:Class="StaySteady.Mobile.Views.Exercise2_" BackgroundColor="White" Title="Exercise Tutorial">
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness">
       <OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>

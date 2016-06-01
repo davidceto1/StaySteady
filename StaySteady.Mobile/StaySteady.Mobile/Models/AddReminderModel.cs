@@ -34,7 +34,7 @@ namespace StaySteady.Mobile.Models
             }
         }
 
-        public TimeSpan Time
+        public TimeSpan Times
         {
             get
             {
@@ -42,7 +42,7 @@ namespace StaySteady.Mobile.Models
             }
             set
             {
-                ReminderDateTime = new DateTime(ReminderDateTime.Year, ReminderDateTime.Minute, ReminderDateTime.Day, value.Hours, value.Minutes, 0);
+                ReminderDateTime = new DateTime(ReminderDateTime.Year, ReminderDateTime.Month, ReminderDateTime.Day, value.Hours, value.Minutes, 0);
                 OnPropertyChanged();
             }
         }
