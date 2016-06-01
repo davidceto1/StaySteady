@@ -193,7 +193,7 @@
     	<Button Text="Book Appointment "
             Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"
 			BackgroundColor = "#2C3E50"
-			FontSize="18"
+			FontSize="16"
 			BorderWidth = "1"
            	TextColor="White"
 			WidthRequest = "200"
