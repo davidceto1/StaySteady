@@ -156,7 +156,7 @@
          BackgroundColor = "#ECF0F1"
              Grid.Row="3" Grid.Column="2"
              FontSize="20"
-         TextColor="#ECF0F1"
+         TextColor="#C0392B"
              XAlign="Center"
              YAlign="Center"/>
 
@@ -200,7 +200,7 @@
          BackgroundColor = "#ECF0F1"
              Grid.Row="4" Grid.Column="2"
              FontSize="20"
-         TextColor="#ECF0F1"
+         TextColor="#2C3E50"
              XAlign="Center"
              YAlign="Center"/>
 
@@ -245,7 +245,7 @@
          BackgroundColor = "#ECF0F1"
              Grid.Row="5" Grid.Column="2"
              FontSize="20"
-         TextColor="#ECF0F1"
+         TextColor="#2C3E50"
              XAlign="Center"
              YAlign="Center"/>
 
