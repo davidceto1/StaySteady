@@ -111,7 +111,7 @@ namespace StaySteady.Mobile
 			} else if (whichRow == 3) {
 				switch (whichItem) {
 				case "Name":
-					dataOfThisRow = "Volerie";
+					dataOfThisRow = "Valerie";
 					break;
 				case "Age":
 					dataOfThisRow = "65";
