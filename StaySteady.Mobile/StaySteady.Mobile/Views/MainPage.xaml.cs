@@ -24,12 +24,14 @@ namespace StaySteady.Mobile.Views
 
         private void GoDoctor(object sender, EventArgs e)
         {
-			Navigation.PushAsync(new SummaryPage());
-
+            Navigation.PushAsync(new SummaryPage());
+//			Navigation.PushAsync(new TestPage());
         }
 
         private void GoRelative(object sender, EventArgs e)
         {
+			Patient newPaitent = new Patient ();
+			newPaitent.Name = "Soul";
 			Navigation.PushAsync(new ReportPage());
         }
 
