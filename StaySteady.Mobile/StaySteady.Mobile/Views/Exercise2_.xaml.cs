@@ -12,7 +12,7 @@ namespace StaySteady.Mobile.Views
     {
         public Exercise2_()
         {
-            Title = "Exercise 2";
+            //Title = "Exercise 2";
             Icon = "icon.png";
             InitializeComponent();
         }
