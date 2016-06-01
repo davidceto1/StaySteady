@@ -32,7 +32,10 @@ namespace StaySteady.Mobile.Views
 			this.BindingContext = viewModelOfReport;
 		}
 
+        private void goBookAppointment(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BookAppointmentPage());
+        }
 
-	
     }
 }
