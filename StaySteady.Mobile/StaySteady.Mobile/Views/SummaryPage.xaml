@@ -92,7 +92,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="Soul"
+      <Label Text="{Binding Name1, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="2" Grid.Column="0"
              FontSize="20"
@@ -100,7 +100,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="80"
+      <Label Text="{Binding Age1, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="2" Grid.Column="1"
              FontAttributes = "Bold"
@@ -109,7 +109,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="High"
+      <Label Text="{Binding Risk1, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="2" Grid.Column="2"
              FontSize="20"
@@ -117,22 +117,14 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="12%"
+      <Label Text="{Binding Stability1, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="2" Grid.Column="3"
          FontAttributes = "Bold"
-             FontSize="20"
+             FontSize="18"
          TextColor="#f2eada"
              XAlign="Center"
              YAlign="Center"/>
-
-<!--      <Label Text="(0)Check"
-         BackgroundColor = "#8a2e3b"
-             Grid.Row="2" Grid.Column="4"
-             FontSize="15"
-         TextColor="#f2eada"
-             XAlign="Center"
-             YAlign="Center"/>-->
 
        <Button Text = "Check"
 			Grid.Row="2" Grid.Column="4" 
@@ -141,9 +133,9 @@
 			BorderWidth = "0"
 			BorderRadius = "0"
            	TextColor="#f2eada" 
-           	Command = "{Binding TakeNextAction}"/>
+           	Command = "{Binding TakeNextAction1}"/>
 
-      <Label Text="Amy"
+      <Label Text="{Binding Name2, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="3" Grid.Column="0"
              FontSize="20"
@@ -151,7 +143,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="85"
+      <Label Text="{Binding Age2, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="3" Grid.Column="1"
              FontAttributes = "Bold"
@@ -160,7 +152,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="High"
+      <Label Text="{Binding Risk2, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="3" Grid.Column="2"
              FontSize="20"
@@ -168,22 +160,15 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="15%"
+      <Label Text="{Binding Stability2, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="3" Grid.Column="3"
          FontAttributes = "Bold"
-             FontSize="20"
+             FontSize="18"
          TextColor="#f2eada"
              XAlign="Center"
              YAlign="Center"/>
 
-<!--      <Label Text="(0)Check"
-         BackgroundColor = "#8a2e3b"
-             Grid.Row="3" Grid.Column="4"
-             FontSize="15"
-         TextColor="#f2eada"
-             XAlign="Center"
-             YAlign="Center"/>-->
 
           <Button Text = "Check"
 			Grid.Row="3" Grid.Column="4" 
@@ -192,9 +177,9 @@
 			BorderWidth = "0"
 			BorderRadius = "0"
            	TextColor="#f2eada" 
-           	Command = "{Binding TakeNextAction}"/>
+           	Command = "{Binding TakeNextAction2}"/>
 
-      <Label Text="Mariah"
+      <Label Text="{Binding Name3, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="4" Grid.Column="0"
              FontSize="20"
@@ -202,7 +187,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="71"
+      <Label Text="{Binding Age3, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="4" Grid.Column="1"
              FontAttributes = "Bold"
@@ -211,7 +196,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="Low"
+      <Label Text="{Binding Risk3, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="4" Grid.Column="2"
              FontSize="20"
@@ -219,22 +204,15 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="80%"
+      <Label Text="{Binding Stability3, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="4" Grid.Column="3"
          FontAttributes = "Bold"
-             FontSize="20"
+             FontSize="18"
          TextColor="#f2eada"
              XAlign="Center"
              YAlign="Center"/>
 
-<!--      <Label Text="(0)Check"
-         BackgroundColor = "#8a2e3b"
-             Grid.Row="4" Grid.Column="4"
-             FontSize="15"
-         TextColor="#f2eada"
-             XAlign="Center"
-             YAlign="Center"/>-->
 
            <Button Text = "Check"
 			Grid.Row="4" Grid.Column="4" 
@@ -243,10 +221,10 @@
 			BorderWidth = "0"
 			BorderRadius = "0"
            	TextColor="#f2eada" 
-           	Command = "{Binding TakeNextAction}"/>  
+           	Command = "{Binding TakeNextAction3}"/>  
 
     <Label x:Name = "patientName_e"
-     Text = "{Binding PatientName5, StringFormat='{0}'}"
+     Text = "{Binding Name4, StringFormat='{0}'}"
      BackgroundColor = "#8a2e3b"
          Grid.Row="5" Grid.Column="0"
          FontSize="20"
@@ -254,7 +232,7 @@
          XAlign="Center"
          YAlign="Center"/>
 
-      <Label Text="65"
+      <Label Text="{Binding Age4, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="5" Grid.Column="1"
              FontAttributes = "Bold"
@@ -263,7 +241,7 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="Medium"
+      <Label Text="{Binding Risk4, StringFormat='{0}'}"
          BackgroundColor = "#8a2e3b"
              Grid.Row="5" Grid.Column="2"
              FontSize="20"
@@ -271,22 +249,15 @@
              XAlign="Center"
              YAlign="Center"/>
 
-      <Label Text="45%"
+      <Label Text="{Binding Stability4, StringFormat='{0}'}"
          BackgroundColor = "#f15a22"
              Grid.Row="5" Grid.Column="3"
          FontAttributes = "Bold"
-             FontSize="20"
+             FontSize="18"
          TextColor="#f2eada"
              XAlign="Center"
              YAlign="Center"/>
 
-<!--      <button Text="(0)Check"
-         BackgroundColor = "#8a2e3b"
-             Grid.Row="5" Grid.Column="4"
-             FontSize="15"
-         TextColor="#f2eada"
-             XAlign="Center"
-             YAlign="Center"/>-->
 
     <Button Text = "Check"
 			Grid.Row="5" Grid.Column="4" 
@@ -295,22 +266,7 @@
 			BorderWidth = "0"
 			BorderRadius = "0"
            	TextColor="#f2eada" 
-           	Command = "{Binding TakeNextAction}"/>  
-
-<!--      <Label Text=" "
-		   
-             Grid.Row="6" Grid.Column="4"
-             FontSize="20"
-             XAlign="Center"
-             YAlign="Center"/>-->
-
-<!--      <Button Text = "Back"
-			Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"
-			BackgroundColor = "#c1a173"
-			FontSize="20"
-			BorderWidth = "1"
-           	TextColor="White"
-			WidthRequest = "200" />-->
+           	Command = "{Binding TakeNextAction4}"/>  
 
     </Grid>
 

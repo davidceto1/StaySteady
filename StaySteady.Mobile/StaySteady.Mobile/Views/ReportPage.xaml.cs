@@ -12,23 +12,27 @@ namespace StaySteady.Mobile.Views
 {
     public partial class ReportPage : ContentPage
     {
-		private SummaryViewModel _viewModel;
+		
+		private ReportViewModel viewModelOfReport;
 
-		public ReportPage(Patient patient)
-        {
+		public ReportPage()
+		{
 
-            InitializeComponent();
-			_viewModel = new  SummaryViewModel (DependencyService.Get<INavigationService>());
-			_viewModel.PatientName5 = patient.Name;
-			this.BindingContext = _viewModel;
+			InitializeComponent();
+			viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>());
+			this.BindingContext = viewModelOfReport;
 
-        }
+		}
 
-        private void goBookAppointment(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new BookAppointmentPage());
-        }
+		public ReportPage(int whichOne)
+		{
 
-        //public string Name {set; get;}
+			InitializeComponent();
+			viewModelOfReport = new  ReportViewModel (DependencyService.Get<INavigationService>(),whichOne);
+			this.BindingContext = viewModelOfReport;
+		}
+
+
+	
     }
 }

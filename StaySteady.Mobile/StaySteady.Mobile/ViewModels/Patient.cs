@@ -5,26 +5,36 @@ namespace StaySteady.Mobile
 {
 	public class Patient:ViewModelBase
 	{
-		string name,risk,heartRate;
-		DateTime lastUpdate;
-		int age;
-		double stability,temperature;
+		//private ReportModel modelForReport;
 
 		public Patient ()
 		{
+			
+
 		}
 
-		public Patient (string namea){
-			name = namea;
+		public Patient (string namePatient){
+			Name = namePatient;
 		}
 
-//		public string Name {
-//
-//			set { SetProperty (ref name, value); }
-//			get { return name; }
-//		}
+		public Patient (string riskPatient,DateTime lastdate,string namePatient,int agePatient,string staPatient,string temperatureP,string hearRateP){
+			Risk = riskPatient;
+			LastUpdate = lastdate;
+			Name = namePatient;
+			Age = agePatient;
+			Stability = staPatient;
+			Temperature = temperatureP;
+			HeartRate = hearRateP;
+		}
+
 
 		public string Name{ set; get;}
+		public string Risk{ set; get;}
+		public string HeartRate{ set; get;}
+		public string Stability{ set; get;}
+		public string Temperature{ set; get;}
+		public DateTime LastUpdate{ set; get;}
+		public int Age{ set; get;}
 
 	}
 }

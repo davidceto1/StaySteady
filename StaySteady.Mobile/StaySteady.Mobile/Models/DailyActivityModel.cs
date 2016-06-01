@@ -13,6 +13,7 @@ namespace StaySteady.Mobile.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        int imyStability;
         private String _myName;
         private String _myStabilityRate;
         private String _name0, _name1, _name2;
@@ -21,13 +22,20 @@ namespace StaySteady.Mobile.Models
         public String MyStabilityRate
         {
             get { return _myStabilityRate; }
-            set { _myStabilityRate = "You have improved your stability by " + value + "%"; OnPropertyChanged("MyStabilityRate"); }
+            set { _myStabilityRate = "You have improved your stability by " + value + "%";
+                int.TryParse(value, out imyStability);
+                OnPropertyChanged("MyStabilityRate"); }
         }
 
         public String MyName
         {
             get { return _myName; }
-            set { _myName = value + ", You are doing great !"; OnPropertyChanged("MyName"); }
+            set {
+                if (imyStability > 10)
+                    _myName = value + ", You are doing great !";
+                else if (imyStability <= 10)
+                    _myName = value + ", go for a walk !";
+                OnPropertyChanged("MyName"); }
         }
 
         public String UserName0

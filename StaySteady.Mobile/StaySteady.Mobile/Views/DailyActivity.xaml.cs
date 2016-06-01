@@ -18,7 +18,7 @@ namespace StaySteady.Mobile.Views
         public DailyActivity()
         {
             InitializeComponent();
-            _viewModel = new DailyActivityViewModel(DependencyService.Get<INavigationService>());
+            _viewModel = new DailyActivityViewModel();
             this.BindingContext = _viewModel;           
         }
     }
