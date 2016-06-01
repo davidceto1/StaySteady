@@ -191,7 +191,7 @@
            XAlign="Center"
            YAlign="Center"/>
 			
-    	<Button Text="Book Appointment "
+    	<Button Text="Book Appointment " Clicked="goBookAppointment"
             Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2"
 			BackgroundColor = "#c1a173"
 			FontSize="20"

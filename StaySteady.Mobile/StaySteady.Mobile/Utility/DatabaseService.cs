@@ -20,9 +20,14 @@ namespace StaySteady.Mobile.Utility
             _sqlLite = DependencyService.Get<ISQLite>().GetConnection();
         }
 
-        public static DatabaseService GetInstance => _instance ?? (_instance =  new DatabaseService());
+        public static DatabaseService GetInstance()
+        {
+            return _instance ?? (_instance = new DatabaseService());
+        } 
 
-        public SQLiteConnection SqLiteConnection { get; set; }
+        public SQLiteConnection SqLiteConnection {
+            get { return _sqlLite; }
+        }
 
         public bool TableExists(string tableName)
         {
@@ -32,19 +37,8 @@ namespace StaySteady.Mobile.Utility
 
         public void InitializeDB()
         {
-            CreateIfNotExists(typeof(TestModel));
-            CreateIfNotExists(typeof(AddReminderModel));
-        }
-
-        private void CreateIfNotExists(Type dataType)
-        {
-            if (!TableExists(dataType.Name))
-            {
-                MethodInfo createMethod = typeof (SQLiteConnection).GetRuntimeMethod("CreateTable", null);
-                MethodInfo genericMethod = createMethod.MakeGenericMethod(dataType);
-                genericMethod.Invoke(_sqlLite, null);
-            }
-                
+            _sqlLite.CreateTable<AddReminderModel>();
+            _sqlLite.CreateTable<TestModel>();
         }
 
     }

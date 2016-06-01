@@ -49,5 +49,10 @@ namespace StaySteady.Mobile.Views
         {
             Navigation.PushAsync(new Exercise());
         }
+
+        private void BookAppointment_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BookAppointmentPage());
+        }
     }
 }

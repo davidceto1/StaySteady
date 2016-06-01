@@ -21,8 +21,9 @@ namespace StaySteady.Mobile.Views
         {
             InitializeComponent();
             _ViewModel = new FallDetectedViewModel(DependencyService.Get<INavigationService>());
-            this.BindingContext = _ViewModel;         
-            
+            this.BindingContext = _ViewModel;
+            this.FallLabel.TextColor = Color.FromHex("#34495E");
+            FallCountdownNumber.TextColor = Color.FromHex("#34495E");
         }
     }
 }

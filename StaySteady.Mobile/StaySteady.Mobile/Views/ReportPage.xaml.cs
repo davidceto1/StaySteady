@@ -24,6 +24,11 @@ namespace StaySteady.Mobile.Views
 
         }
 
-		//public string Name {set; get;}
+        private void goBookAppointment(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BookAppointmentPage());
+        }
+
+        //public string Name {set; get;}
     }
 }

@@ -50,6 +50,9 @@
     <Compile Include="ViewModels\AddReminderViewModel.cs" />
     <Compile Include="ViewModels\DailyActivityViewModel.cs" />
     <Compile Include="ViewModels\FallDetectedViewModel.cs" />
+    <Compile Include="Views\BookAppointmentPage.xaml.cs">
+      <DependentUpon>BookAppointmentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddReminderPage.xaml.cs">
       <DependentUpon>AddReminderPage.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SummaryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BookAppointmentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

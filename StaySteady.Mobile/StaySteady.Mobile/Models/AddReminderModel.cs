@@ -34,7 +34,7 @@ namespace StaySteady.Mobile.Models
             }
         }
 
-        public TimeSpan Time
+        public TimeSpan Times
         {
             get
             {

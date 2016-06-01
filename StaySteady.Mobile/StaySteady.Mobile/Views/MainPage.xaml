@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StaySteady.Mobile.Views.MainPage">
+             x:Class="StaySteady.Mobile.Views.MainPage" BackgroundColor="White" Title="Stay Steady">
   <ContentPage.Content>
-    <StackLayout Orientation="Vertical"   >
+    <StackLayout Orientation="Vertical"   HorizontalOptions="FillAndExpand">
       <Label Text="What do you want to do?"
            Font="Large"
            HorizontalOptions="Center"
             />
-      <Button Text="View Daily Activity" HorizontalOptions="Center" Clicked="GoElder" ></Button>
-      <Button Text="View Summary" HorizontalOptions="Center" Clicked="GoDoctor"></Button>
-      <Button Text="View Daily Report" HorizontalOptions="Center"  Clicked="GoRelative"></Button>
-      <Button Text="Fall detection" HorizontalOptions="Center"  Clicked="Button_OnClicked"></Button>
-      <Button Text="Add exercise reminder" HorizontalOptions="Center"  Clicked="AddReminderButton_Clicked"></Button>
-      <Button Text="View Excercises" HorizontalOptions="Center"  Clicked="Tutorial_Clicked"></Button>
+      <Button Text="View Daily Activity" Clicked="GoElder" ></Button>
+      <Button Text="View Summary" Clicked="GoDoctor"></Button>
+      <Button Text="View Daily Report"  Clicked="GoRelative"></Button>
+      <Button Text="Fall detection"  Clicked="Button_OnClicked"></Button>
+      <Button Text="Add exercise reminder"  Clicked="AddReminderButton_Clicked"></Button>
+      <Button Text="View Excercises"   Clicked="Tutorial_Clicked"></Button>
+      <Button Text="Book appointment"  Clicked="BookAppointment_OnClicked"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
