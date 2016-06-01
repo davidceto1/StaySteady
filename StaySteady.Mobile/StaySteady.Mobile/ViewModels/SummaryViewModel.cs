@@ -28,6 +28,7 @@ namespace StaySteady.Mobile.ViewModels
 			
 			patientArray = SummaryModel.CreatePatientData ();
 
+			//var data = DatabaseService.GetInstance().SqLiteConnection.Table<AddReminder>().Select()
 
 			int i = 0;
 			Name1 = patientArray [i].Name;

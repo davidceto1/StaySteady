@@ -39,6 +39,7 @@ namespace StaySteady.Mobile.Utility
         {
             _sqlLite.CreateTable<AddReminderModel>();
             _sqlLite.CreateTable<TestModel>();
+			_sqlLite.CreateTable<ReportModel> ();
         }
 
     }
