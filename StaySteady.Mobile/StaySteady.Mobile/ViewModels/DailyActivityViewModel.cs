@@ -18,7 +18,6 @@ namespace StaySteady.Mobile.ViewModels
         public DailyActivityViewModel()
         {
             Model = new DailyActivityModel();
-
         }
         public DailyActivityModel Model { get; set; }
     }

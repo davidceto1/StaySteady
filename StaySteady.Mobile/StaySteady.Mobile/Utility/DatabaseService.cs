@@ -37,8 +37,28 @@ namespace StaySteady.Mobile.Utility
 
         public void InitializeDB()
         {
-            _sqlLite.CreateTable<AddReminderModel>();
-            _sqlLite.CreateTable<TestModel>();
+            _sqlLite.CreateTable<AddReminderModel>();            
+            _sqlLite.CreateTable<TestModel>();     
+
+            _sqlLite.CreateTable<DailyActivityModelTable>();
+
+            // if no data exists in the table, insert data for DailyActivity
+            if (_sqlLite.Table<DailyActivityModelTable>().Count() == 0)
+            {
+                var newRow = new DailyActivityModelTable();
+                newRow.Name = "Linda"; // The activity is displayed for the first user 
+                newRow.StabilityRate = "55";
+                _sqlLite.Insert(newRow);
+                newRow = new DailyActivityModelTable();
+                newRow.Name = "Saul";
+                newRow.StabilityRate = "60";
+                _sqlLite.Insert(newRow);
+                newRow = new DailyActivityModelTable();
+                newRow.Name = "Kim";
+                newRow.StabilityRate = "20";
+                _sqlLite.Insert(newRow);
+            }
+
         }
 
     }
