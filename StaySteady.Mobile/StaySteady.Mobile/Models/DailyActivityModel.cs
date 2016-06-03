@@ -6,9 +6,20 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using StaySteady.Mobile.Annotations;
+using StaySteady.Mobile.Utility;
+using SQLite;
 
 namespace StaySteady.Mobile.Models
 {
+    [Table("DailyActivityModelTable")]
+    public class DailyActivityModelTable
+    {
+        [PrimaryKey, AutoIncrement, Column("_id")]
+        public int Id { get; set; }
+        [MaxLength(8)]
+        public string Name { get; set; }
+        public string StabilityRate { get; set;  }
+    }
     public class DailyActivityModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -22,7 +33,7 @@ namespace StaySteady.Mobile.Models
         public String MyStabilityRate
         {
             get { return _myStabilityRate; }
-            set { _myStabilityRate = "You have improved your stability by " + value + "%";
+            set { _myStabilityRate = "Your current stability rate is " + value + "%";
                 int.TryParse(value, out imyStability);
                 OnPropertyChanged("MyStabilityRate"); }
         }
@@ -31,10 +42,10 @@ namespace StaySteady.Mobile.Models
         {
             get { return _myName; }
             set {
-                if (imyStability > 10)
+                if (imyStability > 50)
                     _myName = value + ", You are doing great !";
-                else if (imyStability <= 10)
-                    _myName = value + ", go for a walk !";
+                else if (imyStability <= 50)
+                    _myName = value + ", Go for a walk !";
                 OnPropertyChanged("MyName"); }
         }
 
@@ -73,14 +84,33 @@ namespace StaySteady.Mobile.Models
 
         public DailyActivityModel()
         {
-            MyStabilityRate= "12";
-            MyName = "Linda";
-            UserName0 = "Saul";
-            UserName1 = "Linda";
-            UserName2 = "Kim";
-            Stability0 = "20";
-            Stability1 = "12";
-            Stability2 = "8";
+            SQLiteConnection db = DatabaseService.GetInstance().SqLiteConnection;
+            DailyActivityModelTable table = db.Get<DailyActivityModelTable>(1);
+            MyStabilityRate = table.StabilityRate;
+            MyName = table.Name;
+            int i = 0;
+            var sorted = db.Query<DailyActivityModelTable>("SELECT * FROM DailyActivityModelTable ORDER by StabilityRate DESC");
+            foreach (var row in sorted)
+            {
+                if (i == 0)
+                {
+                    UserName0 = row.Name;
+                    Stability0 = row.StabilityRate;
+                }
+                else if (i == 1)
+                {
+                    UserName1 = row.Name;
+                    Stability1 = row.StabilityRate;
+                }
+                else if (i == 2)
+                {
+                    UserName2 = row.Name;
+                    Stability2 = row.StabilityRate;
+                }
+                else break;
+                i++;
+            }
+            
         }
 
 
