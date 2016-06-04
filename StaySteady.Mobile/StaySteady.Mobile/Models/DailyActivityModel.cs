@@ -11,15 +11,6 @@ using SQLite;
 
 namespace StaySteady.Mobile.Models
 {
-    [Table("DailyActivityModelTable")]
-    public class DailyActivityModelTable
-    {
-        [PrimaryKey, AutoIncrement, Column("_id")]
-        public int Id { get; set; }
-        [MaxLength(8)]
-        public string Name { get; set; }
-        public string StabilityRate { get; set;  }
-    }
     public class DailyActivityModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -45,7 +36,7 @@ namespace StaySteady.Mobile.Models
                 if (imyStability > 50)
                     _myName = value + ", You are doing great !";
                 else if (imyStability <= 50)
-                    _myName = value + ", Go for a walk !";
+                    _myName = value + ", Watch your step !";
                 OnPropertyChanged("MyName"); }
         }
 
@@ -85,11 +76,11 @@ namespace StaySteady.Mobile.Models
         public DailyActivityModel()
         {
             SQLiteConnection db = DatabaseService.GetInstance().SqLiteConnection;
-            DailyActivityModelTable table = db.Get<DailyActivityModelTable>(1);
+            StaySteadyTableModel table = db.Get<StaySteadyTableModel>(1);
             MyStabilityRate = table.StabilityRate;
             MyName = table.Name;
             int i = 0;
-            var sorted = db.Query<DailyActivityModelTable>("SELECT * FROM DailyActivityModelTable ORDER by StabilityRate DESC");
+            var sorted = db.Query<StaySteadyTableModel>("SELECT * FROM StaySteady ORDER by StabilityRate DESC");
             foreach (var row in sorted)
             {
                 if (i == 0)

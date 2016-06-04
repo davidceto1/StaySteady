@@ -3331,8 +3331,17 @@ namespace StaySteady.Mobile.Droid
 			// aapt resource value: 0x7f020069
 			public const int mr_ic_settings_light = 2130837609;
 			
+			// aapt resource value: 0x7f02006d
+			public const int notification_template_icon_bg = 2130837613;
+			
 			// aapt resource value: 0x7f02006a
-			public const int notification_template_icon_bg = 2130837610;
+			public const int SitToStand = 2130837610;
+			
+			// aapt resource value: 0x7f02006b
+			public const int StepUps = 2130837611;
+			
+			// aapt resource value: 0x7f02006c
+			public const int ToeRaises = 2130837612;
 			
 			static Drawable()
 			{

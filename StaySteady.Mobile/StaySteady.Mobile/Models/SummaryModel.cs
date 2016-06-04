@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SQLite;
+using StaySteady.Mobile.Utility;
+using System;
 using System.Collections.Generic;
 
 namespace StaySteady.Mobile.Models
@@ -7,6 +9,7 @@ namespace StaySteady.Mobile.Models
 	{
 //		private ReportModel modelForOnePatient;
 		private int patientNum;
+        int whichPatient;
 
 		public SummaryModel ()
 		{
@@ -30,19 +33,46 @@ namespace StaySteady.Mobile.Models
 		public static List<Patient> CreatePatientData(){
 			List<Patient> allpatients = new List<Patient> ();
 
-			int number = GetNumber();
-			for (int i = 0; i < number; i++) {
-				Patient curPatient = new Patient();
-				curPatient.Name = ReportModel.GetPatientData (i, "Name");
-				curPatient.Age = int.Parse(ReportModel.GetPatientData (i, "Age"));
-				curPatient.HeartRate = ReportModel.GetPatientData (i, "HeartRate");
-				curPatient.LastUpdate = Convert.ToDateTime(ReportModel.GetPatientData(i,"LastUpdate"));
-				curPatient.Temperature = ReportModel.GetPatientData (i, "Temperature");
-				curPatient.Stability = ReportModel.GetPatientData (i, "Stability");
-				curPatient.Risk = ReportModel.GetPatientData (i, "Risk");
-				allpatients.Add (curPatient);
-			}
-			return allpatients;
+            /*			int number = GetNumber();
+                        for (int i = 0; i < number; i++) {
+                            Patient curPatient = new Patient();
+                            curPatient.Name = ReportModel.GetPatientData (i, "Name");
+                            curPatient.Age = int.Parse(ReportModel.GetPatientData (i, "Age"));
+                            curPatient.HeartRate = ReportModel.GetPatientData (i, "HeartRate");
+                            curPatient.LastUpdate = Convert.ToDateTime(ReportModel.GetPatientData(i,"LastUpdate"));
+                            curPatient.Temperature = ReportModel.GetPatientData (i, "Temperature");
+                            curPatient.Stability = ReportModel.GetPatientData (i, "Stability");
+                            curPatient.Risk = ReportModel.GetPatientData (i, "Risk");
+                            allpatients.Add (curPatient);
+                        }
+            */
+
+            SQLiteConnection db = DatabaseService.GetInstance().SqLiteConnection;
+            var data = db.Query<StaySteadyTableModel>("SELECT * FROM StaySteady ORDER by StabilityRate ASC");
+            double risk = 0;
+            int age;
+            int i = 0;
+            foreach (var row in data)
+            {
+                Patient curPatient = new Patient();
+                curPatient.Name = row.Name;
+                int.TryParse(row.Age, out age);
+                curPatient.Age = age;
+                curPatient.HeartRate = row.HeartRateMin + "-" + row.HeartRateMax;
+                curPatient.LastUpdate = Convert.ToDateTime(row.LastUpdate);
+                curPatient.Temperature = row.Temperature +"C";
+                curPatient.Stability = row.StabilityRate;
+                double.TryParse(row.StabilityRate, out risk);
+                curPatient.Risk = ReportModel.CalculateRisk(risk);
+                allpatients.Add(curPatient);
+                if (row.Id == 1)
+                    ReportViewModel.WhichPatient = i;
+                if (i++ >= 3)
+                    break;
+
+            }
+
+            return allpatients;
 		}
 
 		//save data into the database

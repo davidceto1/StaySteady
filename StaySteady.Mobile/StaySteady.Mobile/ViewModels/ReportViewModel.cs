@@ -59,7 +59,7 @@ namespace StaySteady.Mobile
 		public int Age{ set; get;}
 
 		public SummaryModel SummaryModelData { get; set; }
-		public int WhichPatient  { get; set; }
+		public static int WhichPatient  { get; set; }
 
 		public Command GoBook{private set; get;}
 

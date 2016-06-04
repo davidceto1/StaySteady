@@ -6,8 +6,8 @@ namespace StaySteady.Mobile
 	public class ReportModel
 	{
 		//set the threshold of the judgement of the risk
-		private const double THRELOW = 0.25;
-		private const double THREHIGH = 0.75;
+		private const double THRELOW = 25;
+		private const double THREHIGH = 50;
 	
 
 
@@ -19,7 +19,7 @@ namespace StaySteady.Mobile
 			
 		}
 
-	
+	/*
 		//retrive the data of the patients, access the database
 		public static string GetPatientData(int whichRow, string whichItem){
 			//read data from database
@@ -144,7 +144,7 @@ namespace StaySteady.Mobile
 
 		}
 
-
+*/
 
 		//save the calculated data into the database
 		public void SaveData(){
@@ -171,13 +171,13 @@ namespace StaySteady.Mobile
 		}
 
 		//decide the risk of this person
-		public string CalculateRisk(double stability){
+		public static string CalculateRisk(double stability){
 			string risk;
 			if (stability > 0 && stability < THRELOW)
 				risk = "High";
 			else if (stability >= THRELOW && stability < THREHIGH)
 				risk = "Medium";
-			else if (stability >= THREHIGH && stability <= 1)
+			else if (stability >= THREHIGH && stability <= 100)
 				risk = "Low";
 			else
 				risk = "Invalid Stability Information!";

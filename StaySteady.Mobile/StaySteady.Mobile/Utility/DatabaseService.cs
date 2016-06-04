@@ -38,30 +38,55 @@ namespace StaySteady.Mobile.Utility
         public void InitializeDB()
         {
 
-            _sqlLite.CreateTable<AddReminderModel>();
-            _sqlLite.CreateTable<TestModel>();
-			_sqlLite.CreateTable<ReportModel> ();
-
-            _sqlLite.CreateTable<AddReminderModel>();            
-            _sqlLite.CreateTable<TestModel>();     
-
-            _sqlLite.CreateTable<DailyActivityModelTable>();
+            _sqlLite.CreateTable<StaySteadyTableModel>();
 
             // if no data exists in the table, insert data for DailyActivity
-            if (_sqlLite.Table<DailyActivityModelTable>().Count() == 0)
+            if (_sqlLite.Table<StaySteadyTableModel>().Count() == 0)
             {
-                var newRow = new DailyActivityModelTable();
-                newRow.Name = "Linda"; // The activity is displayed for the first user 
+                var newRow = new StaySteadyTableModel();
+                newRow.Name = "Linda"; // The reports (except summary) are displayed for the first user only
                 newRow.StabilityRate = "55";
+                newRow.LastUpdate = "20/05/2016 12:13:33 PM";
+                newRow.Age = "80";
+                newRow.Temperature = "36";
+                newRow.HeartRateMin = "60";
+                newRow.HeartRateMax = "120";
+                newRow.Observations = "Previous Falls";
                 _sqlLite.Insert(newRow);
-                newRow = new DailyActivityModelTable();
+
+                newRow = new StaySteadyTableModel();
                 newRow.Name = "Saul";
                 newRow.StabilityRate = "60";
+                newRow.LastUpdate = "22/05/2016 12:55:01 PM";
+                newRow.Age = "75";
+                newRow.Temperature = "36.2";
+                newRow.HeartRateMin = "80";
+                newRow.HeartRateMax = "130";
+                newRow.Observations = "All Good";
                 _sqlLite.Insert(newRow);
-                newRow = new DailyActivityModelTable();
+
+                newRow = new StaySteadyTableModel();
                 newRow.Name = "Kim";
-                newRow.StabilityRate = "20";
+                newRow.StabilityRate = "15";
+                newRow.LastUpdate = "21/05/2016 12:40:13 PM";
+                newRow.Age = "85";
+                newRow.Temperature = "36.1";
+                newRow.HeartRateMin = "55";
+                newRow.HeartRateMax = "110";
+                newRow.Observations = "Previous Falls";
                 _sqlLite.Insert(newRow);
+
+                newRow = new StaySteadyTableModel();
+                newRow.Name = "Amy";
+                newRow.StabilityRate = "12";
+                newRow.LastUpdate = "23/05/2016 12:35:13 PM";
+                newRow.Age = "65";
+                newRow.Temperature = "36.1";
+                newRow.HeartRateMin = "65";
+                newRow.HeartRateMax = "130";
+                newRow.Observations = "Previous Falls";
+                _sqlLite.Insert(newRow);
+
             }
 
 
