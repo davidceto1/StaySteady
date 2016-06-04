@@ -32,7 +32,7 @@
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*" />
         <ColumnDefinition Width="*" />
-        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="1.5*" />
         <ColumnDefinition Width="*" />
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
@@ -72,7 +72,7 @@
          BackgroundColor = "#34495E"
              Grid.Row="1" Grid.Column="3"
          FontAttributes = "Bold"
-             FontSize="19"
+             FontSize="16"
          TextColor="#ECF0F1"
              XAlign="Center"
              YAlign="Center"/>
