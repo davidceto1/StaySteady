@@ -54,7 +54,7 @@ namespace StaySteady.Mobile.ViewModels
         private void CallEmergency()
         {
             ExecuteServiceCall();
-            _dialer.Dial("698");
+            _dialer.Dial("1194");
         }
 
         private void GoBack()
@@ -87,9 +87,7 @@ namespace StaySteady.Mobile.ViewModels
                 @"http://staysteady.azurewebsites.net/api/values/NotifyFall?ZUMO-API-VERSION=2.0.0";
 
 
-            var response =  await _httpClient.PostAsync(staySteadyEmergencyUrl,null);
-
-            var algo = "";
+            await _httpClient.PostAsync(staySteadyEmergencyUrl,null);
         }
     }
 }

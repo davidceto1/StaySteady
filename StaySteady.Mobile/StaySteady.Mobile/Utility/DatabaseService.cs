@@ -46,6 +46,7 @@ namespace StaySteady.Mobile.Utility
             _sqlLite.CreateTable<TestModel>();     
 
             _sqlLite.CreateTable<DailyActivityModelTable>();
+            _sqlLite.CreateTable<Patient>();
 
             // if no data exists in the table, insert data for DailyActivity
             if (_sqlLite.Table<DailyActivityModelTable>().Count() == 0)
@@ -64,6 +65,13 @@ namespace StaySteady.Mobile.Utility
                 _sqlLite.Insert(newRow);
             }
 
+            if (_sqlLite.Table<Patient>().Count() == 0)
+            {
+                foreach (Patient patient in SummaryModel.CreatePatientData())
+                {
+                    _sqlLite.Insert(patient);
+                }
+            }
 
         }
 
