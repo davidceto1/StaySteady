@@ -31,15 +31,15 @@ namespace StaySteady.Mobile
 
 		public ReportViewModel (INavigationService navigationService, int i)
 		{
-			WhichPatient = i;
+//			WhichPatient = i;
 			allPatients = SummaryModel.CreatePatientData ();
-			Name = allPatients [WhichPatient].Name;
-			Risk = allPatients [WhichPatient].Risk;
-			Age = allPatients [WhichPatient].Age;
-			HeartRate = allPatients [WhichPatient].HeartRate;
-			LastUpdate = allPatients [WhichPatient].LastUpdate;
-			Stability = allPatients [WhichPatient].Stability;
-			Temperature = allPatients [WhichPatient].Temperature;
+			Name = allPatients [i].Name;
+			Risk = allPatients [i].Risk;
+			Age = allPatients [i].Age;
+			HeartRate = allPatients [i].HeartRate;
+			LastUpdate = allPatients [i].LastUpdate;
+			Stability = allPatients [i].Stability;
+			Temperature = allPatients [i].Temperature;
 			GoBook = new Command (OpenAppointPage);
 
 		}

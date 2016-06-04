@@ -6,8 +6,8 @@
     <Editor TextColor="#34495E" HeightRequest="150" Text="{Binding Model.ReminderText}">
     </Editor>
     <DatePicker Date="{Binding Model.Date}" BackgroundColor="#34495E" ></DatePicker>
-    <TimePicker x:Name="MyTimePicker"  BackgroundColor="#34495E"></TimePicker>
+    <TimePicker x:Name="MyTimePicker"  BackgroundColor="#34495E" ></TimePicker>
     <Button Text="Add" ></Button>
-    <Button Text="Cancel"></Button>
+    <Button Text="Cancel" ></Button>
   </StackLayout>
 </ContentPage>

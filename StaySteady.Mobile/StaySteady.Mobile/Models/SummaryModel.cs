@@ -47,6 +47,7 @@ namespace StaySteady.Mobile.Models
             */
 
             SQLiteConnection db = DatabaseService.GetInstance().SqLiteConnection;
+//			db.DropTable<StaySteadyTableModel> ();
             var data = db.Query<StaySteadyTableModel>("SELECT * FROM StaySteady ORDER by StabilityRate ASC");
             double risk = 0;
             int age;
@@ -59,8 +60,8 @@ namespace StaySteady.Mobile.Models
                 curPatient.Age = age;
                 curPatient.HeartRate = row.HeartRateMin + "-" + row.HeartRateMax;
                 curPatient.LastUpdate = Convert.ToDateTime(row.LastUpdate);
-                curPatient.Temperature = row.Temperature +"C";
-                curPatient.Stability = row.StabilityRate;
+				curPatient.Temperature = row.Temperature +"℃";
+                curPatient.Stability = row.StabilityRate + "%";
                 double.TryParse(row.StabilityRate, out risk);
                 curPatient.Risk = ReportModel.CalculateRisk(risk);
                 allpatients.Add(curPatient);

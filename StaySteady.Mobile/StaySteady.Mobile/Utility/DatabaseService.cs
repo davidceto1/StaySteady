@@ -46,7 +46,7 @@ namespace StaySteady.Mobile.Utility
                 var newRow = new StaySteadyTableModel();
                 newRow.Name = "Linda"; // The reports (except summary) are displayed for the first user only
                 newRow.StabilityRate = "55";
-                newRow.LastUpdate = "20/05/2016 12:13:33";
+                newRow.LastUpdate = "2016/05/20 12:13:33";
                 newRow.Age = "80";
                 newRow.Temperature = "36";
                 newRow.HeartRateMin = "60";
@@ -57,7 +57,7 @@ namespace StaySteady.Mobile.Utility
                 newRow = new StaySteadyTableModel();
                 newRow.Name = "Saul";
                 newRow.StabilityRate = "60";
-                newRow.LastUpdate = "22/05/2016 12:55:01";
+				newRow.LastUpdate = "2016/05/22 12:55:01";
                 newRow.Age = "75";
                 newRow.Temperature = "36.2";
                 newRow.HeartRateMin = "80";
@@ -68,7 +68,7 @@ namespace StaySteady.Mobile.Utility
                 newRow = new StaySteadyTableModel();
                 newRow.Name = "Kim";
                 newRow.StabilityRate = "15";
-                newRow.LastUpdate = "21/05/2016 12:40:13";
+				newRow.LastUpdate = "2016/05/21 12:40:13";
                 newRow.Age = "85";
                 newRow.Temperature = "36.1";
                 newRow.HeartRateMin = "55";
@@ -79,7 +79,7 @@ namespace StaySteady.Mobile.Utility
                 newRow = new StaySteadyTableModel();
                 newRow.Name = "Amy";
                 newRow.StabilityRate = "12";
-                newRow.LastUpdate = "23/05/2016 12:35:13";
+				newRow.LastUpdate = "2016/05/23 12:35:13";
                 newRow.Age = "65";
                 newRow.Temperature = "36.1";
                 newRow.HeartRateMin = "65";
