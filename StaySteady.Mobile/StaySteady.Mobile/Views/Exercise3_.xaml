@@ -17,20 +17,30 @@
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
 
       <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100*" />
+      	<ColumnDefinition Width="5*" />
+        <ColumnDefinition Width="80*" />
+        <ColumnDefinition Width="5*" />
       </Grid.ColumnDefinitions>
 
-      <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="Yellow" BackgroundColor="Olive" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+      <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="White" BackgroundColor="#34495E" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3"/>
 
-      <Label Text="Stability Rate 83%" FontSize="25" TextColor="Gray" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
-      <Label Text="Butt-Kicker Run" FontSize="20" TextColor="Olive" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
-      <Image Source="buttkickerrun.jpg" Grid.Row="3" Grid.Column="0"/>
+      <Label Text="Stability Rate 83%" FontSize="25" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3"/>
+      <Label Text="Butt-Kicker Run" FontSize="20" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3"/>
+      <Image Source="ToeRaises.jpg" Grid.Row="3" Grid.ColumnSpan="3"/>
 
-      <Label Text="Run in place, bringing your heel to your butt to work your hamstring a bit." FontSize="15" Grid.Row="4" Grid.Column="0"/>
-      <Label Text="Pump your arms to keep your upper body moving and your heart rate up." FontSize="15" Grid.Row="5" Grid.Column="0"/>
+      <Label Text="" FontSize="15" Grid.Row="4" Grid.ColumnSpan="3"/>
+      <Label Text="Hold onto a firm support to maintain balance." FontSize="15" TextColor="#34495E" Grid.Row="5" Grid.Column="1"/>
+      <Label Text="Stand with your back facing the wall for safety." FontSize="15" TextColor="#34495E" Grid.Row="6" Grid.Column="1"/>
+      <Label Text="Lift your toes off the ground." FontSize="15" TextColor="#34495E" Grid.Row="7" Grid.Column="1"/>
+      <Label Text="Lower your toes again." FontSize="15" TextColor="#34495E" Grid.Row="8" Grid.Column="1"/>
+      <Label Text="Repeat this 10 times." FontSize="15" TextColor="#34495E" Grid.Row="9" Grid.Column="1"/>
     </Grid>
 
   </ScrollView>

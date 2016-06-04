@@ -24,6 +24,7 @@ namespace StaySteady.Mobile.Views
 	{
 		public Exercise ()
 		{
+			this.Title = "Excercise Tutorial";
 			this.Children.Add (new Exercise1_ ());
 			this.Children.Add (new Exercise2_ ());
 			this.Children.Add (new Exercise3_ ());

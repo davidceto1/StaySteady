@@ -17,20 +17,27 @@
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
 
       <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100*" />
+      	<ColumnDefinition Width="5*" />
+        <ColumnDefinition Width="80*" />
+        <ColumnDefinition Width="5*" />
       </Grid.ColumnDefinitions>
 
-      <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="Yellow" BackgroundColor="Olive" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+      <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="White" BackgroundColor="#34495E" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3"/>
 
-      <Label Text="Stability Rate 83%" FontSize="25" TextColor="Gray" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
-      <Label Text="Jumping Jack" FontSize="20" TextColor="Olive" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
-      <Image Source="jumpingjack.jpg" Grid.Row="3" Grid.Column="0"/>
-
-      <Label Text="Jump off the balls of your feet as you perform this classic exercise." FontSize="15" Grid.Row="4" Grid.Column="0"/>
-      <Label Text="To modify, step the legs wide and then step them together instead of jumping." FontSize="15" Grid.Row="5" Grid.Column="0"/>
+      <Label Text="Stability Rate 83%" FontSize="25" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3"/>
+      <Label Text="Jumping Jack" FontSize="20" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3"/>
+      <Image Source="SitToStand.jpg" Grid.Row="3" Grid.ColumnSpan="3"/>
+      <Label Text="" FontSize="15" Grid.Row="4" Grid.ColumnSpan="3"/>
+      <Label Text="Sit on a chair with arms across your chest." FontSize="15" TextColor="#34495E" Grid.Row="5" Grid.Column="1"/>
+      <Label Text="Bring your feet behind your knees and lean forward over the knees." FontSize="15" TextColor="#34495E" Grid.Row="6" Grid.Column="1"/>
+      <Label Text="Stand with your trunk upright and sit down on the chair again." FontSize="15" TextColor="#34495E" Grid.Row="7" Grid.Column="1"/>
+      <Label Text="Repeat this 10 times." FontSize="15" TextColor="#34495E" Grid.Row="8" Grid.Column="1"/>
     </Grid>
 
   </ScrollView>
