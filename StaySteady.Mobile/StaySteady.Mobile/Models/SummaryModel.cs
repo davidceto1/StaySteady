@@ -9,7 +9,6 @@ namespace StaySteady.Mobile.Models
 	{
 //		private ReportModel modelForOnePatient;
 		private int patientNum;
-        int whichPatient;
 
 		public SummaryModel ()
 		{

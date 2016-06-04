@@ -27,8 +27,8 @@ namespace StaySteady.Mobile.ViewModels
 		public SummaryViewModel (INavigationService navigationService)
 		{
 
-		    patientArray = DatabaseService.GetInstance().SqLiteConnection.Table<Patient>().ToList();
-
+            //		    patientArray = DatabaseService.GetInstance().SqLiteConnection.Table<Patient>().ToList();
+            patientArray = SummaryModel.CreatePatientData();
             //var data = DatabaseService.GetInstance().SqLiteConnection.Table<AddReminder>().Select()
 
             int i = 0;
