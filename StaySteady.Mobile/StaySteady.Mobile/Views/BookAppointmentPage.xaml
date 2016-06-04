@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StaySteady.Mobile.Views.BookAppointmentPage" Title="Book appointment" BackgroundColor="White">
+             x:Class="StaySteady.Mobile.Views.BookAppointmentPage" Title="Book appointment" BackgroundColor="#FFFFFF">
   <StackLayout Orientation="Vertical">
-    <Editor TextColor="#7f8c8d" BackgroundColor="White" HeightRequest="150" Text="{Binding Model.ReminderText}">
+    <Editor TextColor="#34495E" HeightRequest="150" Text="{Binding Model.ReminderText}">
     </Editor>
-    <DatePicker Date="{Binding Model.Date}" ></DatePicker>
-    <TimePicker x:Name="MyTimePicker"  ></TimePicker>
+    <DatePicker Date="{Binding Model.Date}" BackgroundColor="#34495E" ></DatePicker>
+    <TimePicker x:Name="MyTimePicker"  BackgroundColor="#34495E"></TimePicker>
     <Button Text="Add" ></Button>
     <Button Text="Cancel"></Button>
   </StackLayout>

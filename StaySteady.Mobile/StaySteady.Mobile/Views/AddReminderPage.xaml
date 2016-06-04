@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StaySteady.Mobile.Views.AddReminderPage" Title="Add exercise reminder">
+             x:Class="StaySteady.Mobile.Views.AddReminderPage" Title="Add exercise reminder" BackgroundColor="#FFFFFF">
   <StackLayout Orientation="Vertical">
-    <Editor TextColor="#7f8c8d" BackgroundColor="White" HeightRequest="150" Text="{Binding Model.ReminderText}">
+    <Editor TextColor="#34495E" BackgroundColor="White" HeightRequest="150" Text="{Binding Model.ReminderText}">
     </Editor>
-    <DatePicker Date="{Binding Model.Date}" ></DatePicker>
-    <TimePicker x:Name="MyTimePicker"
+    <DatePicker Date="{Binding Model.Date}" BackgroundColor="#34495E" ></DatePicker>
+    <TimePicker x:Name="MyTimePicker " BackgroundColor="#34495E"
                 Time="{Binding Model.Times}"></TimePicker>
     <Button Text="Add" Command="{Binding AddReminderCommand}"></Button>
     <Button Text="Cancel"></Button>
