@@ -30,8 +30,8 @@ namespace StaySteady.Mobile.Views
 
         private void GoRelative(object sender, EventArgs e)
         {
-			Patient newPaitent = new Patient ();
-			newPaitent.Name = "Soul";
+//			Patient newPaitent = new Patient ();
+//			newPaitent.Name = "Soul";
 			Navigation.PushAsync(new ReportPage());
         }
 

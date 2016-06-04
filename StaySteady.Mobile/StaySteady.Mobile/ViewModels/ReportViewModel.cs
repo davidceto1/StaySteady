@@ -4,6 +4,8 @@ using System.ComponentModel;
 using StaySteady.Mobile.Models;
 using GalaSoft.MvvmLight.Views;
 using System.Collections.Generic;
+using Xamarin.Forms;
+using StaySteady.Mobile.Views;
 
 namespace StaySteady.Mobile
 {
@@ -23,6 +25,7 @@ namespace StaySteady.Mobile
 			LastUpdate = allPatients [WhichPatient].LastUpdate;
 			Stability = allPatients [WhichPatient].Stability;
 			Temperature = allPatients [WhichPatient].Temperature;
+			GoBook = new Command (OpenAppointPage);
 
 		}
 
@@ -37,10 +40,15 @@ namespace StaySteady.Mobile
 			LastUpdate = allPatients [WhichPatient].LastUpdate;
 			Stability = allPatients [WhichPatient].Stability;
 			Temperature = allPatients [WhichPatient].Temperature;
+			GoBook = new Command (OpenAppointPage);
 
 		}
 
-			
+		private void OpenAppointPage()
+		{
+			App.Navigation.PushAsync(new BookAppointmentPage());
+
+		}	
 
 		public string Name{ set; get;}
 		public string Risk{ set; get;}
@@ -52,6 +60,8 @@ namespace StaySteady.Mobile
 
 		public SummaryModel SummaryModelData { get; set; }
 		public int WhichPatient  { get; set; }
+
+		public Command GoBook{private set; get;}
 
 	}
 }
