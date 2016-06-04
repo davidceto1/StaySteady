@@ -41,7 +41,6 @@ namespace StaySteady.Mobile.ViewModels
         {
             DatabaseService.GetInstance().SqLiteConnection.Insert(Model);
             var a = DatabaseService.GetInstance().SqLiteConnection.Table<AddReminderModel>().Select(model => model);
-            var algo = "";
         }
     }
 }

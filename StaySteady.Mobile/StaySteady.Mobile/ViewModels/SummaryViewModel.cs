@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using System.Collections.Generic;
+using System.Linq;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
 using GalaSoft.MvvmLight.Command;
@@ -25,12 +26,12 @@ namespace StaySteady.Mobile.ViewModels
 
 		public SummaryViewModel (INavigationService navigationService)
 		{
-			
-			patientArray = SummaryModel.CreatePatientData ();
 
-			//var data = DatabaseService.GetInstance().SqLiteConnection.Table<AddReminder>().Select()
+		    patientArray = DatabaseService.GetInstance().SqLiteConnection.Table<Patient>().ToList();
 
-			int i = 0;
+            //var data = DatabaseService.GetInstance().SqLiteConnection.Table<AddReminder>().Select()
+
+            int i = 0;
 			Name1 = patientArray [i].Name;
 			Risk1 = patientArray [i].Risk;
 			Age1 = patientArray [i].Age;
