@@ -13,7 +13,7 @@
       <Button Text="View Daily Report"  Clicked="GoRelative"></Button>
       <Button Text="Fall detection"  Clicked="Button_OnClicked"></Button>
       <Button Text="Add exercise reminder"  Clicked="AddReminderButton_Clicked"></Button>
-      <Button Text="View Excercises"   Clicked="Tutorial_Clicked"></Button>
+      <Button Text="View Exercises"   Clicked="Tutorial_Clicked"></Button>
       <Button Text="Book appointment"  Clicked="BookAppointment_OnClicked"></Button>
     </StackLayout>
   </ContentPage.Content>
