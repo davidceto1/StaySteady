@@ -31,7 +31,7 @@
       <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="White" BackgroundColor="#34495E" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3"/>
 
       <Label Text="{Binding Model.MyStabilityRate}" FontSize="25" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3"/>
-      <Label Text="Jumping Jack" FontSize="20" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3"/>
+      <Label Text="Sit to Stand" FontSize="20" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3"/>
       <Image Source="SitToStand.jpg" Grid.Row="3" Grid.ColumnSpan="3"/>
       <Label Text="" FontSize="15" Grid.Row="4" Grid.ColumnSpan="3"/>
       <Label Text="Sit on a chair with arms across your chest." FontSize="15" TextColor="#34495E" Grid.Row="5" Grid.Column="1"/>
