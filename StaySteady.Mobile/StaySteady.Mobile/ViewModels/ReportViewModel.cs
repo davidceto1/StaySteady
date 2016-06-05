@@ -31,7 +31,6 @@ namespace StaySteady.Mobile
 
 		public ReportViewModel (INavigationService navigationService, int i)
 		{
-//			WhichPatient = i;
 			allPatients = SummaryModel.CreatePatientData ();
 			Name = allPatients [i].Name;
 			Risk = allPatients [i].Risk;

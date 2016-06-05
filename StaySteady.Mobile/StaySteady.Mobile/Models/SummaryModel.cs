@@ -7,47 +7,19 @@ namespace StaySteady.Mobile.Models
 {
 	public class SummaryModel
 	{
-//		private ReportModel modelForOnePatient;
-		private int patientNum;
+
 
 		public SummaryModel ()
 		{
-			patientNum = GetNumber ();
-		}
 
-		public int PatientNum { get; set;}
-
-		//get the total patients
-		public static int GetNumber()
-		{
-			int patientNum;
-			//read from the database
-			patientNum = 4;
-
-			return patientNum;
 		}
 
 
-		//create the patient list array
+
+		//create the patient list array, get data from database
 		public static List<Patient> CreatePatientData(){
 			List<Patient> allpatients = new List<Patient> ();
-
-            /*			int number = GetNumber();
-                        for (int i = 0; i < number; i++) {
-                            Patient curPatient = new Patient();
-                            curPatient.Name = ReportModel.GetPatientData (i, "Name");
-                            curPatient.Age = int.Parse(ReportModel.GetPatientData (i, "Age"));
-                            curPatient.HeartRate = ReportModel.GetPatientData (i, "HeartRate");
-                            curPatient.LastUpdate = Convert.ToDateTime(ReportModel.GetPatientData(i,"LastUpdate"));
-                            curPatient.Temperature = ReportModel.GetPatientData (i, "Temperature");
-                            curPatient.Stability = ReportModel.GetPatientData (i, "Stability");
-                            curPatient.Risk = ReportModel.GetPatientData (i, "Risk");
-                            allpatients.Add (curPatient);
-                        }
-            */
-
-            SQLiteConnection db = DatabaseService.GetInstance().SqLiteConnection;
-//			db.DropTable<StaySteadyTableModel> ();
+			SQLiteConnection db = DatabaseService.GetInstance().SqLiteConnection;
             var data = db.Query<StaySteadyTableModel>("SELECT * FROM StaySteady ORDER by StabilityRate ASC");
             double risk = 0;
             int age;
@@ -74,11 +46,7 @@ namespace StaySteady.Mobile.Models
 
             return allpatients;
 		}
-
-		//save data into the database
-
-
-		public ReportModel ModelForOnePatient{ get; set;}
+			
 	
 	
 	}
