@@ -32,7 +32,7 @@
       <Label Text="Swipe to see other tutorial" FontSize="15" TextColor="White" BackgroundColor="#34495E" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3"/>
 
       <Label Text="{Binding Model.MyStabilityRate}" FontSize="25" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3"/>
-      <Label Text="Butt-Kicker Run" FontSize="20" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3"/>
+      <Label Text="Toe Raises" FontSize="20" TextColor="#34495E" HorizontalTextAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3"/>
       <Image Source="ToeRaises.jpg" Grid.Row="3" Grid.ColumnSpan="3"/>
 
       <Label Text="" FontSize="15" Grid.Row="4" Grid.ColumnSpan="3"/>
